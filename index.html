@@ -56,9 +56,25 @@
           lastTouchEnd = now;
         }, { passive: false });
 
+        function isOpaqueForeignError(event) {
+          return !event.error && (!event.filename || new URL(event.filename, location.href).origin !== location.origin);
+        }
+
+        window.addEventListener("error", function (event) {
+          if (isOpaqueForeignError(event)) {
+            console.warn("Ignored an error from a script outside the game: " + event.message);
+            event.stopImmediatePropagation();
+          }
+        });
+
         function showError(message) {
           errorBox.textContent = message;
           errorBox.hidden = false;
+        }
+
+        function showRuntimeError(message) {
+          showError("Something went wrong. Reopen the game to keep playing.\n\n" + message);
+          return true;
         }
 
         function showBanner(message, type) {
@@ -72,19 +88,20 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/11503cd8a9ac5827ef84b48c565cf9eb.data",
-          frameworkUrl: buildUrl + "/1e493cd5f4623975769b155e58efc28c.framework.js",
-          codeUrl: buildUrl + "/dfdca4db4ebbf865701e654b9d4a6f97.wasm",
+          dataUrl: buildUrl + "/f3c6504cecc7c422a9b4445f2b90c8c8.data",
+          frameworkUrl: buildUrl + "/d9279ca28c150c7097256af093b15853.framework.js",
+          codeUrl: buildUrl + "/ba01e104826c150964ac1caa1aaf22fe.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "The Dragon's Lair Gaming Studio",
           productName: "One Last Bite",
           productVersion: "0.1.0",
           devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
-          showBanner: showBanner
+          showBanner: showBanner,
+          errorHandler: showRuntimeError
         };
 
         var script = document.createElement("script");
-        script.src = buildUrl + "/0d614ad36bd61e592706faec4b72d4b3.loader.js";
+        script.src = buildUrl + "/f7b76d1e1e73f435e0c9c1514c32e3cc.loader.js";
         script.onload = function () {
           createUnityInstance(canvas, config, function (progress) {
             loadingFill.style.width = (100 * progress) + "%";
