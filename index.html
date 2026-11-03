@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>One Last Bite</title>
+    <meta name="description" content="Endless room-based snake. Bank your bite before the room caves in.">
+    <meta name="theme-color" content="#141419">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="One Last Bite">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="TemplateData/icons/icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="TemplateData/icons/icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="TemplateData/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="game">
+      <canvas id="unity-canvas" tabindex="-1"></canvas>
+      <div id="loading">
+        <div id="loading-title">One Last Bite</div>
+        <div id="loading-track"><div id="loading-fill"></div></div>
+      </div>
+      <div id="error" hidden></div>
+    </div>
+    <script>
+      (function () {
+        var canvas = document.querySelector("#unity-canvas");
+        var loading = document.querySelector("#loading");
+        var loadingFill = document.querySelector("#loading-fill");
+        var errorBox = document.querySelector("#error");
+
+        function preventDefault(event) {
+          event.preventDefault();
+        }
+
+        ["gesturestart", "gesturechange", "gestureend", "contextmenu", "selectstart", "dragstart"].forEach(function (name) {
+          document.addEventListener(name, preventDefault, { passive: false });
+        });
+
+        document.addEventListener("touchmove", function (event) {
+          if (event.cancelable) {
+            event.preventDefault();
+          }
+        }, { passive: false });
+
+        var lastTouchEnd = 0;
+        document.addEventListener("touchend", function (event) {
+          var now = Date.now();
+          if (now - lastTouchEnd < 350 && event.cancelable) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        }, { passive: false });
+
+        function showError(message) {
+          errorBox.textContent = message;
+          errorBox.hidden = false;
+        }
+
+        function showBanner(message, type) {
+          if (type === "error") {
+            showError(message);
+          } else {
+            console.warn(message);
+          }
+        }
+
+        var buildUrl = "Build";
+        var config = {
+          arguments: [],
+          dataUrl: buildUrl + "/11503cd8a9ac5827ef84b48c565cf9eb.data",
+          frameworkUrl: buildUrl + "/1e493cd5f4623975769b155e58efc28c.framework.js",
+          codeUrl: buildUrl + "/dfdca4db4ebbf865701e654b9d4a6f97.wasm",
+          streamingAssetsUrl: "StreamingAssets",
+          companyName: "The Dragon's Lair Gaming Studio",
+          productName: "One Last Bite",
+          productVersion: "0.1.0",
+          devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+          showBanner: showBanner
+        };
+
+        var script = document.createElement("script");
+        script.src = buildUrl + "/0d614ad36bd61e592706faec4b72d4b3.loader.js";
+        script.onload = function () {
+          createUnityInstance(canvas, config, function (progress) {
+            loadingFill.style.width = (100 * progress) + "%";
+          }).then(function () {
+            loading.hidden = true;
+            canvas.focus();
+          }).catch(showError);
+        };
+        script.onerror = function () {
+          showError("The game failed to load. Check your connection and reopen.");
+        };
+        document.body.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>
