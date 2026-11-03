@@ -56,9 +56,25 @@
           lastTouchEnd = now;
         }, { passive: false });
 
+        function isOpaqueForeignError(event) {
+          return !event.error && (!event.filename || new URL(event.filename, location.href).origin !== location.origin);
+        }
+
+        window.addEventListener("error", function (event) {
+          if (isOpaqueForeignError(event)) {
+            console.warn("Ignored an error from a script outside the game: " + event.message);
+            event.stopImmediatePropagation();
+          }
+        });
+
         function showError(message) {
           errorBox.textContent = message;
           errorBox.hidden = false;
+        }
+
+        function showRuntimeError(message) {
+          showError("Something went wrong. Reopen the game to keep playing.\n\n" + message);
+          return true;
         }
 
         function showBanner(message, type) {
@@ -72,7 +88,7 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/11503cd8a9ac5827ef84b48c565cf9eb.data",
+          dataUrl: buildUrl + "/ad1141ca4035f88fd3cc3ce808406161.data",
           frameworkUrl: buildUrl + "/1e493cd5f4623975769b155e58efc28c.framework.js",
           codeUrl: buildUrl + "/dfdca4db4ebbf865701e654b9d4a6f97.wasm",
           streamingAssetsUrl: "StreamingAssets",
@@ -80,7 +96,8 @@
           productName: "One Last Bite",
           productVersion: "0.1.0",
           devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
-          showBanner: showBanner
+          showBanner: showBanner,
+          errorHandler: showRuntimeError
         };
 
         var script = document.createElement("script");
