@@ -4,7 +4,9 @@
     "height": 23
   },
   "readySeconds": 1.0,
-  "restartDelaySeconds": 0.5,
+  "deathFreezeSeconds": 0.6,
+  "gameOverInputDelaySeconds": 0.3,
+  "pauseAfterFrameGapSeconds": 0.5,
   "snake": {
     "startingLength": 3,
     "turnBufferCapacity": 2
@@ -59,7 +61,7 @@
       "ticksPerSecond": 8,
       "doorThreshold": 5,
       "layoutDifficulty": 1,
-      "collapseSeconds": 120,
+      "collapseSeconds": 45,
       "ringIntervalSeconds": 2.0,
       "fruitWeights": [
         {
@@ -89,7 +91,7 @@
       "ticksPerSecond": 9,
       "doorThreshold": 6,
       "layoutDifficulty": 2,
-      "collapseSeconds": 100,
+      "collapseSeconds": 40,
       "ringIntervalSeconds": 1.75,
       "fruitWeights": [
         {
@@ -119,7 +121,7 @@
       "ticksPerSecond": 10,
       "doorThreshold": 7,
       "layoutDifficulty": 3,
-      "collapseSeconds": 75,
+      "collapseSeconds": 35,
       "ringIntervalSeconds": 1.5,
       "fruitWeights": [
         {
@@ -149,7 +151,7 @@
       "ticksPerSecond": 11,
       "doorThreshold": 8,
       "layoutDifficulty": 4,
-      "collapseSeconds": 55,
+      "collapseSeconds": 30,
       "ringIntervalSeconds": 1.25,
       "fruitWeights": [
         {
