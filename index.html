@@ -88,9 +88,9 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/f3c6504cecc7c422a9b4445f2b90c8c8.data",
+          dataUrl: buildUrl + "/53ecf2b493f2766e301ec21577150a8f.data",
           frameworkUrl: buildUrl + "/d9279ca28c150c7097256af093b15853.framework.js",
-          codeUrl: buildUrl + "/ba01e104826c150964ac1caa1aaf22fe.wasm",
+          codeUrl: buildUrl + "/57b88b13bb573b5bd55b845b6210b37a.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "The Dragon's Lair Gaming Studio",
           productName: "One Last Bite",
@@ -101,7 +101,7 @@
         };
 
         var script = document.createElement("script");
-        script.src = buildUrl + "/f7b76d1e1e73f435e0c9c1514c32e3cc.loader.js";
+        script.src = buildUrl + "/ff79e4c71da45b95ab7e86cc78f06d97.loader.js";
         script.onload = function () {
           createUnityInstance(canvas, config, function (progress) {
             loadingFill.style.width = (100 * progress) + "%";
