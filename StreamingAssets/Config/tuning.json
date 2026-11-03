@@ -1,0 +1,178 @@
+{
+  "grid": {
+    "width": 15,
+    "height": 23
+  },
+  "readySeconds": 1.0,
+  "restartDelaySeconds": 0.5,
+  "snake": {
+    "startingLength": 3,
+    "turnBufferCapacity": 2
+  },
+  "input": {
+    "minSwipeDistance": 0.05
+  },
+  "run": {
+    "useFixedSeed": false,
+    "fixedSeed": 12345
+  },
+  "fruit": {
+    "countOnBoard": 3,
+    "types": [
+      {
+        "name": "Ember",
+        "color": "#D55E00",
+        "shape": "Circle"
+      },
+      {
+        "name": "Sun",
+        "color": "#F0E442",
+        "shape": "Triangle"
+      },
+      {
+        "name": "Sky",
+        "color": "#56B4E9",
+        "shape": "Diamond"
+      },
+      {
+        "name": "Leaf",
+        "color": "#009E73",
+        "shape": "Square"
+      },
+      {
+        "name": "Plum",
+        "color": "#CC79A7",
+        "shape": "Plus"
+      }
+    ]
+  },
+  "scoring": {
+    "fruitBaseValue": 10,
+    "fruitValueGrowthPerRoom": 0.25,
+    "chainStep": 1,
+    "chainCap": 5,
+    "depthBonusPerRoom": 25
+  },
+  "depthTiers": [
+    {
+      "fromDepth": 1,
+      "ticksPerSecond": 8,
+      "doorThreshold": 5,
+      "layoutDifficulty": 1,
+      "collapseSeconds": 120,
+      "ringIntervalSeconds": 2.0,
+      "fruitWeights": [
+        {
+          "fruit": "Ember",
+          "weight": 20
+        },
+        {
+          "fruit": "Sun",
+          "weight": 20
+        },
+        {
+          "fruit": "Sky",
+          "weight": 20
+        },
+        {
+          "fruit": "Leaf",
+          "weight": 20
+        },
+        {
+          "fruit": "Plum",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "fromDepth": 3,
+      "ticksPerSecond": 9,
+      "doorThreshold": 6,
+      "layoutDifficulty": 2,
+      "collapseSeconds": 100,
+      "ringIntervalSeconds": 1.75,
+      "fruitWeights": [
+        {
+          "fruit": "Ember",
+          "weight": 20
+        },
+        {
+          "fruit": "Sun",
+          "weight": 20
+        },
+        {
+          "fruit": "Sky",
+          "weight": 20
+        },
+        {
+          "fruit": "Leaf",
+          "weight": 20
+        },
+        {
+          "fruit": "Plum",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "fromDepth": 6,
+      "ticksPerSecond": 10,
+      "doorThreshold": 7,
+      "layoutDifficulty": 3,
+      "collapseSeconds": 75,
+      "ringIntervalSeconds": 1.5,
+      "fruitWeights": [
+        {
+          "fruit": "Ember",
+          "weight": 20
+        },
+        {
+          "fruit": "Sun",
+          "weight": 20
+        },
+        {
+          "fruit": "Sky",
+          "weight": 20
+        },
+        {
+          "fruit": "Leaf",
+          "weight": 20
+        },
+        {
+          "fruit": "Plum",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "fromDepth": 10,
+      "ticksPerSecond": 11,
+      "doorThreshold": 8,
+      "layoutDifficulty": 4,
+      "collapseSeconds": 55,
+      "ringIntervalSeconds": 1.25,
+      "fruitWeights": [
+        {
+          "fruit": "Ember",
+          "weight": 20
+        },
+        {
+          "fruit": "Sun",
+          "weight": 20
+        },
+        {
+          "fruit": "Sky",
+          "weight": 20
+        },
+        {
+          "fruit": "Leaf",
+          "weight": 20
+        },
+        {
+          "fruit": "Plum",
+          "weight": 20
+        }
+      ]
+    }
+  ]
+}
