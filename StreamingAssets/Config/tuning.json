@@ -14,6 +14,9 @@
   "input": {
     "minSwipeDistance": 0.05
   },
+  "profile": {
+    "historyRowsShown": 50
+  },
   "run": {
     "useFixedSeed": false,
     "fixedSeed": 12345
