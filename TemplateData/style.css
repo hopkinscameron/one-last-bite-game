@@ -50,8 +50,22 @@ body {
 }
 
 #loading[hidden],
+#loading-emblem[hidden],
+#loading-rank[hidden],
 #error[hidden] {
   display: none;
+}
+
+#loading-emblem {
+  width: 96px;
+  height: 96px;
+  image-rendering: auto;
+}
+
+#loading-rank {
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: #fad15c;
 }
 
 #loading-title {

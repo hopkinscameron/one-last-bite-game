@@ -1,0 +1,918 @@
+{
+  "defaultPalette": "Classic",
+  "defaultTrail": "NoTrail",
+  "defaultHead": "Square",
+  "items": [
+    {
+      "id": "Shed",
+      "name": "Shed",
+      "kind": "PowerUp",
+      "source": {
+        "type": "Start"
+      }
+    },
+    {
+      "id": "Wild",
+      "name": "Wild",
+      "kind": "PowerUp",
+      "source": {
+        "type": "Start"
+      }
+    },
+    {
+      "id": "Breaker",
+      "name": "Breaker",
+      "kind": "PowerUp",
+      "source": {
+        "type": "Tier",
+        "tier": "DeepDiver.Beginner"
+      }
+    },
+    {
+      "id": "Brace",
+      "name": "Brace",
+      "kind": "PowerUp",
+      "source": {
+        "type": "Tier",
+        "tier": "EscapeArtist.Beginner"
+      }
+    },
+    {
+      "id": "SlowMo",
+      "name": "Slow-mo",
+      "kind": "PowerUp",
+      "source": {
+        "type": "Tier",
+        "tier": "ChainMaster.Beginner"
+      }
+    },
+    {
+      "id": "Mystery",
+      "name": "Mystery",
+      "kind": "PowerUp",
+      "source": {
+        "type": "TierCount",
+        "tier": "Beginner",
+        "count": 5
+      }
+    },
+    {
+      "id": "Classic",
+      "name": "Classic",
+      "kind": "Palette",
+      "source": {
+        "type": "Start"
+      },
+      "palette": {
+        "head": "#F5F5F5",
+        "body": "#C7CCD6",
+        "pattern": "Solid"
+      }
+    },
+    {
+      "id": "Abyss",
+      "name": "Abyss",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "DeepDiver.Standard"
+      },
+      "palette": {
+        "head": "#E6E3FF",
+        "body": "#8579D9",
+        "pattern": "Fade"
+      }
+    },
+    {
+      "id": "Links",
+      "name": "Links",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "ChainMaster.Standard"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#B9BEC8",
+        "pattern": "Alternate",
+        "accent": "#8E86C9"
+      }
+    },
+    {
+      "id": "Ledger",
+      "name": "Ledger",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Banker.Standard"
+      },
+      "palette": {
+        "head": "#F4EFE3",
+        "body": "#D3C9B1",
+        "pattern": "Stripe",
+        "accent": "#9E9583"
+      }
+    },
+    {
+      "id": "Velvet",
+      "name": "Velvet",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "HighRoller.Standard"
+      },
+      "palette": {
+        "head": "#E9DDFF",
+        "body": "#9A80D6",
+        "pattern": "Solid"
+      }
+    },
+    {
+      "id": "Smoke",
+      "name": "Smoke",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "EscapeArtist.Standard"
+      },
+      "palette": {
+        "head": "#ECECEC",
+        "body": "#A3A6AD",
+        "pattern": "Fade"
+      }
+    },
+    {
+      "id": "Ash",
+      "name": "Ash",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "LastBite.Standard"
+      },
+      "palette": {
+        "head": "#E0E0E0",
+        "body": "#BDBDBD",
+        "pattern": "Stripe",
+        "accent": "#76767C"
+      }
+    },
+    {
+      "id": "Ribbon",
+      "name": "Ribbon",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "LongTail.Standard"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#C9BCF2",
+        "pattern": "Alternate",
+        "accent": "#F2F2F7"
+      }
+    },
+    {
+      "id": "Cream",
+      "name": "Cream",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Glutton.Standard"
+      },
+      "palette": {
+        "head": "#FFF9EC",
+        "body": "#EADFC8",
+        "pattern": "Solid"
+      }
+    },
+    {
+      "id": "Slate",
+      "name": "Slate",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Explorer.Standard"
+      },
+      "palette": {
+        "head": "#DCE3EE",
+        "body": "#8D9AB0",
+        "pattern": "Solid"
+      }
+    },
+    {
+      "id": "Snow",
+      "name": "Snow",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Purist.Standard"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#F0F2F5",
+        "pattern": "Solid"
+      }
+    },
+    {
+      "id": "Concrete",
+      "name": "Concrete",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Demolition.Standard"
+      },
+      "palette": {
+        "head": "#D9D9D9",
+        "body": "#9C9C9C",
+        "pattern": "Stripe",
+        "accent": "#707070"
+      }
+    },
+    {
+      "id": "Joker",
+      "name": "Joker",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Wildcard.Standard"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#9D85E0",
+        "pattern": "Alternate",
+        "accent": "#EEEEEE"
+      }
+    },
+    {
+      "id": "Dusk",
+      "name": "Dusk",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "BorrowedTime.Standard"
+      },
+      "palette": {
+        "head": "#EFE6FF",
+        "body": "#B3A2E6",
+        "pattern": "Fade"
+      }
+    },
+    {
+      "id": "Chrome",
+      "name": "Chrome",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "BulletTime.Standard"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#D5DAE3",
+        "pattern": "Stripe",
+        "accent": "#A8AFBD"
+      }
+    },
+    {
+      "id": "Husk",
+      "name": "Husk",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Molting.Standard"
+      },
+      "palette": {
+        "head": "#F2E8D5",
+        "body": "#C8B99A",
+        "pattern": "Fade"
+      }
+    },
+    {
+      "id": "Dice",
+      "name": "Dice",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "LuckyDraw.Standard"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#F2F2F2",
+        "pattern": "Stripe",
+        "accent": "#8A8A99"
+      }
+    },
+    {
+      "id": "Obsidian",
+      "name": "Obsidian",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "DeepDiver.Veteran"
+      },
+      "palette": {
+        "head": "#C9C2E6",
+        "body": "#6E6491",
+        "pattern": "Solid"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Platinum",
+      "name": "Platinum",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "ChainMaster.Veteran"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#E3E6EB",
+        "pattern": "Alternate",
+        "accent": "#C4C9D2"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Gilded",
+      "name": "Gilded",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Banker.Veteran"
+      },
+      "palette": {
+        "head": "#E8D9A8",
+        "body": "#A88A3A",
+        "pattern": "Alternate",
+        "accent": "#C9AE62"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Royal",
+      "name": "Royal",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "HighRoller.Veteran"
+      },
+      "palette": {
+        "head": "#F3EBFF",
+        "body": "#7D5FC9",
+        "pattern": "Stripe",
+        "accent": "#C9AE62"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Eclipse",
+      "name": "Eclipse",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "EscapeArtist.Veteran"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#5F6170",
+        "pattern": "Stripe",
+        "accent": "#E0E0E0"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Onyx",
+      "name": "Onyx",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "LastBite.Veteran"
+      },
+      "palette": {
+        "head": "#D6D6DE",
+        "body": "#6A6A78",
+        "pattern": "Solid"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Pearl",
+      "name": "Pearl",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "LongTail.Veteran"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#EDE7F2",
+        "pattern": "Alternate",
+        "accent": "#DCD3E6"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Marble",
+      "name": "Marble",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Glutton.Veteran"
+      },
+      "palette": {
+        "head": "#F7F7F7",
+        "body": "#E3E3E3",
+        "pattern": "Stripe",
+        "accent": "#9A9AA6"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Moonstone",
+      "name": "Moonstone",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Explorer.Veteran"
+      },
+      "palette": {
+        "head": "#EEF1FA",
+        "body": "#B8C2DB",
+        "pattern": "Fade"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Starlight",
+      "name": "Starlight",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Purist.Veteran"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#DAD7F5",
+        "pattern": "Solid"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Pewter",
+      "name": "Pewter",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Demolition.Veteran"
+      },
+      "palette": {
+        "head": "#CFCFD4",
+        "body": "#8E9099",
+        "pattern": "Solid"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Amethyst",
+      "name": "Amethyst",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Wildcard.Veteran"
+      },
+      "palette": {
+        "head": "#E2D2FF",
+        "body": "#8A63D2",
+        "pattern": "Solid"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Midnight",
+      "name": "Midnight",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "BorrowedTime.Veteran"
+      },
+      "palette": {
+        "head": "#C2C8F0",
+        "body": "#5A5F9E",
+        "pattern": "Solid"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Frost",
+      "name": "Frost",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "BulletTime.Veteran"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#CFDCEB",
+        "pattern": "Solid"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Ghost",
+      "name": "Ghost",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "Molting.Veteran"
+      },
+      "palette": {
+        "head": "#F0F0F5",
+        "body": "#ABABB8",
+        "pattern": "Fade"
+      },
+      "prestige": true
+    },
+    {
+      "id": "Silver",
+      "name": "Silver",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "LuckyDraw.Veteran"
+      },
+      "palette": {
+        "head": "#FFFFFF",
+        "body": "#C0C3CC",
+        "pattern": "Alternate",
+        "accent": "#E8EAEE"
+      },
+      "prestige": true
+    },
+    {
+      "id": "NoTrail",
+      "name": "None",
+      "kind": "Trail",
+      "source": {
+        "type": "Start"
+      },
+      "trail": {
+        "style": "None"
+      }
+    },
+    {
+      "id": "Bubbles",
+      "name": "Bubbles",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "DeepDiver.Hard"
+      },
+      "trail": {
+        "style": "Dots",
+        "length": 6,
+        "size": 0.3,
+        "alpha": 0.5,
+        "color": "#D8D2FF"
+      }
+    },
+    {
+      "id": "Echo",
+      "name": "Echo",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "ChainMaster.Hard"
+      },
+      "trail": {
+        "style": "Ghost",
+        "length": 3,
+        "size": 0.8,
+        "alpha": 0.35,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "id": "Ink",
+      "name": "Ink",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "Banker.Hard"
+      },
+      "trail": {
+        "style": "Ribbon",
+        "length": 6,
+        "size": 0.18,
+        "alpha": 0.5,
+        "color": "#8C80CC"
+      }
+    },
+    {
+      "id": "Glint",
+      "name": "Glint",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "HighRoller.Hard"
+      },
+      "trail": {
+        "style": "Sparks",
+        "length": 5,
+        "size": 0.22,
+        "alpha": 0.7,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "id": "Dust",
+      "name": "Dust",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "EscapeArtist.Hard"
+      },
+      "trail": {
+        "style": "Dots",
+        "length": 3,
+        "size": 0.22,
+        "alpha": 0.4,
+        "color": "#B0B0B0"
+      }
+    },
+    {
+      "id": "Crumbs",
+      "name": "Crumbs",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "LastBite.Hard"
+      },
+      "trail": {
+        "style": "Sparks",
+        "length": 4,
+        "size": 0.2,
+        "alpha": 0.55,
+        "color": "#D6C8A6"
+      }
+    },
+    {
+      "id": "Streamer",
+      "name": "Streamer",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "LongTail.Hard"
+      },
+      "trail": {
+        "style": "Ribbon",
+        "length": 10,
+        "size": 0.14,
+        "alpha": 0.45,
+        "color": "#C9BCF2"
+      }
+    },
+    {
+      "id": "Smudge",
+      "name": "Smudge",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "Glutton.Hard"
+      },
+      "trail": {
+        "style": "Ghost",
+        "length": 5,
+        "size": 0.75,
+        "alpha": 0.25,
+        "color": "#D6C8A6"
+      }
+    },
+    {
+      "id": "Footprints",
+      "name": "Footprints",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "Explorer.Hard"
+      },
+      "trail": {
+        "style": "Dots",
+        "length": 8,
+        "size": 0.18,
+        "alpha": 0.45,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "id": "Wisp",
+      "name": "Wisp",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "Purist.Hard"
+      },
+      "trail": {
+        "style": "Ribbon",
+        "length": 4,
+        "size": 0.1,
+        "alpha": 0.6,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "id": "Rubble",
+      "name": "Rubble",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "Demolition.Hard"
+      },
+      "trail": {
+        "style": "Sparks",
+        "length": 4,
+        "size": 0.28,
+        "alpha": 0.5,
+        "color": "#9C9C9C"
+      }
+    },
+    {
+      "id": "Afterimage",
+      "name": "Afterimage",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "Wildcard.Hard"
+      },
+      "trail": {
+        "style": "Ghost",
+        "length": 6,
+        "size": 0.85,
+        "alpha": 0.3,
+        "color": "#9D85E0"
+      }
+    },
+    {
+      "id": "Hourglass",
+      "name": "Hourglass",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "BorrowedTime.Hard"
+      },
+      "trail": {
+        "style": "Dots",
+        "length": 5,
+        "size": 0.26,
+        "alpha": 0.5,
+        "color": "#E0D2B0"
+      }
+    },
+    {
+      "id": "MotionBlur",
+      "name": "Motion Blur",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "BulletTime.Hard"
+      },
+      "trail": {
+        "style": "Ghost",
+        "length": 8,
+        "size": 0.9,
+        "alpha": 0.2,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "id": "ShedSkin",
+      "name": "Shed Skin",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "Molting.Hard"
+      },
+      "trail": {
+        "style": "Ghost",
+        "length": 4,
+        "size": 0.95,
+        "alpha": 0.18,
+        "color": "#C8B99A"
+      }
+    },
+    {
+      "id": "Confetti",
+      "name": "Confetti",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "LuckyDraw.Hard"
+      },
+      "trail": {
+        "style": "Sparks",
+        "length": 6,
+        "size": 0.2,
+        "alpha": 0.65,
+        "color": "#DCD3F5"
+      }
+    },
+    {
+      "id": "Square",
+      "name": "Square",
+      "kind": "Head",
+      "source": {
+        "type": "Start"
+      },
+      "shape": "Square"
+    },
+    {
+      "id": "Round",
+      "name": "Round",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Nibbler"
+      },
+      "shape": "Round"
+    },
+    {
+      "id": "Eyes",
+      "name": "Eyes",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Snacker"
+      },
+      "shape": "Eyes"
+    },
+    {
+      "id": "Snout",
+      "name": "Snout",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Forager"
+      },
+      "shape": "Snout"
+    },
+    {
+      "id": "Jaws",
+      "name": "Jaws",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Gobbler"
+      },
+      "shape": "Jaws"
+    },
+    {
+      "id": "Wedge",
+      "name": "Wedge",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Slitherer"
+      },
+      "shape": "Wedge"
+    },
+    {
+      "id": "Fangs",
+      "name": "Fangs",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Viper"
+      },
+      "shape": "Fangs"
+    },
+    {
+      "id": "Hood",
+      "name": "Hood",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Cobra"
+      },
+      "shape": "Hood"
+    },
+    {
+      "id": "Crest",
+      "name": "Crest",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Python"
+      },
+      "shape": "Crest"
+    },
+    {
+      "id": "Halo",
+      "name": "Halo",
+      "kind": "Head",
+      "source": {
+        "type": "Rank",
+        "rank": "Ouroboros"
+      },
+      "shape": "Halo"
+    }
+  ]
+}
