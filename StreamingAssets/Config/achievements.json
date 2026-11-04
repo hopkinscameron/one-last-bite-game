@@ -1,0 +1,522 @@
+{
+  "tiers": [
+    {
+      "name": "Beginner",
+      "points": 1
+    },
+    {
+      "name": "Standard",
+      "points": 2
+    },
+    {
+      "name": "Hard",
+      "points": 4
+    },
+    {
+      "name": "Veteran",
+      "points": 8
+    }
+  ],
+  "ranks": [
+    {
+      "name": "Hatchling",
+      "points": 0
+    },
+    {
+      "name": "Nibbler",
+      "points": 4
+    },
+    {
+      "name": "Snacker",
+      "points": 12
+    },
+    {
+      "name": "Forager",
+      "points": 24
+    },
+    {
+      "name": "Gobbler",
+      "points": 40
+    },
+    {
+      "name": "Slitherer",
+      "points": 60
+    },
+    {
+      "name": "Viper",
+      "points": 85
+    },
+    {
+      "name": "Cobra",
+      "points": 115
+    },
+    {
+      "name": "Python",
+      "points": 150
+    },
+    {
+      "name": "Ouroboros",
+      "points": 200
+    }
+  ],
+  "tracks": [
+    {
+      "id": "DeepDiver",
+      "name": "Deep Diver",
+      "powerUp": "",
+      "progress": "best: room {0}",
+      "tiers": [
+        {
+          "metric": "deepestRoom",
+          "target": 3,
+          "goal": "Reach room 3"
+        },
+        {
+          "metric": "deepestRoom",
+          "target": 6,
+          "goal": "Reach room 6"
+        },
+        {
+          "metric": "deepestRoom",
+          "target": 10,
+          "goal": "Reach room 10"
+        },
+        {
+          "metric": "deepestRoom",
+          "target": 15,
+          "goal": "Reach room 15"
+        }
+      ]
+    },
+    {
+      "id": "ChainMaster",
+      "name": "Chain Master",
+      "powerUp": "",
+      "progress": "best chain: {0}",
+      "tiers": [
+        {
+          "metric": "longestChain",
+          "target": 3,
+          "goal": "Hit a ×3 chain"
+        },
+        {
+          "metric": "longestChain",
+          "target": 5,
+          "goal": "Hit a ×5 chain"
+        },
+        {
+          "metric": "longestChain",
+          "target": 10,
+          "goal": "Hold ×5 for 5 bites"
+        },
+        {
+          "metric": "longestChain",
+          "target": 15,
+          "goal": "Hold ×5 for 10 bites"
+        }
+      ]
+    },
+    {
+      "id": "Banker",
+      "name": "Banker",
+      "powerUp": "",
+      "progress": "best: {0}",
+      "tiers": [
+        {
+          "metric": "biggestBank",
+          "target": 150,
+          "goal": "Bank 150 in one room"
+        },
+        {
+          "metric": "biggestBank",
+          "target": 500,
+          "goal": "Bank 500 in one room"
+        },
+        {
+          "metric": "biggestBank",
+          "target": 1500,
+          "goal": "Bank 1,500 in one room"
+        },
+        {
+          "metric": "biggestBank",
+          "target": 4000,
+          "goal": "Bank 4,000 in one room"
+        }
+      ]
+    },
+    {
+      "id": "HighRoller",
+      "name": "High Roller",
+      "powerUp": "",
+      "progress": "best: {0}",
+      "tiers": [
+        {
+          "metric": "finalScore",
+          "target": 500,
+          "goal": "Score 500"
+        },
+        {
+          "metric": "finalScore",
+          "target": 2000,
+          "goal": "Score 2,000"
+        },
+        {
+          "metric": "finalScore",
+          "target": 6000,
+          "goal": "Score 6,000"
+        },
+        {
+          "metric": "finalScore",
+          "target": 15000,
+          "goal": "Score 15,000"
+        }
+      ]
+    },
+    {
+      "id": "EscapeArtist",
+      "name": "Escape Artist",
+      "powerUp": "",
+      "progress": "best: {0} rings",
+      "tiers": [
+        {
+          "metric": "mostRingsEscaped",
+          "target": 1,
+          "goal": "Escape after the cave-in starts"
+        },
+        {
+          "metric": "mostRingsEscaped",
+          "target": 3,
+          "goal": "Escape after 3 rings fall"
+        },
+        {
+          "metric": "mostRingsEscaped",
+          "target": 5,
+          "goal": "Escape after 5 rings fall"
+        },
+        {
+          "metric": "fullCollapsesEscaped",
+          "target": 1,
+          "goal": "Escape with only the safe path left",
+          "progress": "{0} / {1}"
+        }
+      ]
+    },
+    {
+      "id": "LastBite",
+      "name": "Last Bite",
+      "powerUp": "",
+      "progress": "best: {0}",
+      "tiers": [
+        {
+          "metric": "caveInBitesEscaped",
+          "target": 1,
+          "goal": "Eat a fruit in a cave-in, then escape"
+        },
+        {
+          "metric": "caveInBitesEscaped",
+          "target": 3,
+          "goal": "Eat 3 in one cave-in, then escape"
+        },
+        {
+          "metric": "caveInBitesEscaped",
+          "target": 5,
+          "goal": "Eat 5 in one cave-in, then escape"
+        },
+        {
+          "metric": "caveInBitesEscaped",
+          "target": 10,
+          "goal": "Eat 10 in one cave-in, then escape"
+        }
+      ]
+    },
+    {
+      "id": "LongTail",
+      "name": "Long Tail",
+      "powerUp": "",
+      "progress": "best: {0}",
+      "tiers": [
+        {
+          "metric": "longestTail",
+          "target": 15,
+          "goal": "Grow to length 15"
+        },
+        {
+          "metric": "longestTail",
+          "target": 25,
+          "goal": "Grow to length 25"
+        },
+        {
+          "metric": "longestTail",
+          "target": 40,
+          "goal": "Grow to length 40"
+        },
+        {
+          "metric": "longestTail",
+          "target": 60,
+          "goal": "Grow to length 60"
+        }
+      ]
+    },
+    {
+      "id": "Glutton",
+      "name": "Glutton",
+      "powerUp": "",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "fruitEaten",
+          "target": 100,
+          "goal": "Eat 100 fruit"
+        },
+        {
+          "metric": "fruitEaten",
+          "target": 1000,
+          "goal": "Eat 1,000 fruit"
+        },
+        {
+          "metric": "fruitEaten",
+          "target": 5000,
+          "goal": "Eat 5,000 fruit"
+        },
+        {
+          "metric": "fruitEaten",
+          "target": 20000,
+          "goal": "Eat 20,000 fruit"
+        }
+      ]
+    },
+    {
+      "id": "Explorer",
+      "name": "Explorer",
+      "powerUp": "",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "roomsCleared",
+          "target": 10,
+          "goal": "Clear 10 rooms"
+        },
+        {
+          "metric": "roomsCleared",
+          "target": 100,
+          "goal": "Clear 100 rooms"
+        },
+        {
+          "metric": "roomsCleared",
+          "target": 500,
+          "goal": "Clear 500 rooms"
+        },
+        {
+          "metric": "roomsCleared",
+          "target": 1500,
+          "goal": "Clear 1,500 rooms"
+        }
+      ]
+    },
+    {
+      "id": "Purist",
+      "name": "Purist",
+      "powerUp": "",
+      "progress": "best: room {0}",
+      "tiers": [
+        {
+          "metric": "cleanDepth",
+          "target": 4,
+          "goal": "Reach room 4 with no power-ups"
+        },
+        {
+          "metric": "cleanDepth",
+          "target": 7,
+          "goal": "Reach room 7 with no power-ups"
+        },
+        {
+          "metric": "cleanDepth",
+          "target": 10,
+          "goal": "Reach room 10 with no power-ups"
+        },
+        {
+          "metric": "cleanDepth",
+          "target": 14,
+          "goal": "Reach room 14 with no power-ups"
+        }
+      ]
+    },
+    {
+      "id": "Demolition",
+      "name": "Demolition",
+      "powerUp": "Breaker",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "obstaclesSmashed",
+          "target": 1,
+          "goal": "Smash an obstacle"
+        },
+        {
+          "metric": "obstaclesSmashed",
+          "target": 25,
+          "goal": "Smash 25 obstacles"
+        },
+        {
+          "metric": "obstaclesSmashed",
+          "target": 100,
+          "goal": "Smash 100 obstacles"
+        },
+        {
+          "metric": "mostSmashesInRoom",
+          "target": 3,
+          "goal": "Smash 3 in one room",
+          "progress": "best: {0} in one room"
+        }
+      ]
+    },
+    {
+      "id": "Wildcard",
+      "name": "Wildcard",
+      "powerUp": "Wild",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "wildsUsed",
+          "target": 1,
+          "goal": "Continue a chain with a Wild"
+        },
+        {
+          "metric": "wildsInCappedChain",
+          "target": 1,
+          "goal": "Reach ×5 with a Wild in the chain",
+          "progress": "best: {0} in a ×5 chain"
+        },
+        {
+          "metric": "wildsUsed",
+          "target": 50,
+          "goal": "Use 50 Wilds"
+        },
+        {
+          "metric": "wildsInCappedChain",
+          "target": 2,
+          "goal": "Two Wilds in one ×5 chain",
+          "progress": "best: {0} in a ×5 chain"
+        }
+      ]
+    },
+    {
+      "id": "BorrowedTime",
+      "name": "Borrowed Time",
+      "powerUp": "Brace",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "bracedExits",
+          "target": 1,
+          "goal": "Bank after bracing"
+        },
+        {
+          "metric": "bracedExits",
+          "target": 10,
+          "goal": "Bank after bracing 10 times"
+        },
+        {
+          "metric": "biggestBracedBank",
+          "target": 1000,
+          "goal": "Bank 1,000 in a braced room",
+          "progress": "best: {0}"
+        },
+        {
+          "metric": "biggestBracedBank",
+          "target": 3000,
+          "goal": "Bank 3,000 in a braced room",
+          "progress": "best: {0}"
+        }
+      ]
+    },
+    {
+      "id": "BulletTime",
+      "name": "Bullet Time",
+      "powerUp": "SlowMo",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "slowMoBites",
+          "target": 1,
+          "goal": "Eat a fruit in Slow-mo"
+        },
+        {
+          "metric": "slowMoBites",
+          "target": 50,
+          "goal": "Eat 50 fruit in Slow-mo"
+        },
+        {
+          "metric": "mostBitesInOneSlowMo",
+          "target": 4,
+          "goal": "Eat 4 in one Slow-mo",
+          "progress": "best: {0}"
+        },
+        {
+          "metric": "mostBitesInOneSlowMo",
+          "target": 7,
+          "goal": "Eat 7 in one Slow-mo",
+          "progress": "best: {0}"
+        }
+      ]
+    },
+    {
+      "id": "Molting",
+      "name": "Molting",
+      "powerUp": "Shed",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "shedsUsed",
+          "target": 1,
+          "goal": "Use a Shed"
+        },
+        {
+          "metric": "shedsKeptChain",
+          "target": 1,
+          "goal": "Shed at ×5 and keep the chain going"
+        },
+        {
+          "metric": "biggestShedRoomBank",
+          "target": 1000,
+          "goal": "Bank 1,000 in a room you shed in",
+          "progress": "best: {0}"
+        },
+        {
+          "metric": "shedsInEscapedRoom",
+          "target": 2,
+          "goal": "Shed twice in one room and escape",
+          "progress": "best: {0} in one room"
+        }
+      ]
+    },
+    {
+      "id": "LuckyDraw",
+      "name": "Lucky Draw",
+      "powerUp": "Mystery",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "mysteriesOpened",
+          "target": 1,
+          "goal": "Open a Mystery"
+        },
+        {
+          "metric": "mysteriesOpened",
+          "target": 25,
+          "goal": "Open 25 Mysteries"
+        },
+        {
+          "metric": "mysteriesOpened",
+          "target": 100,
+          "goal": "Open 100 Mysteries"
+        },
+        {
+          "metric": "mysteriesOpened",
+          "target": 250,
+          "goal": "Open 250 Mysteries"
+        }
+      ]
+    }
+  ]
+}
