@@ -12,7 +12,9 @@
     "turnBufferCapacity": 2
   },
   "input": {
-    "minSwipeDistance": 0.05
+    "minSwipeDistance": 0.05,
+    "doubleTapSeconds": 0.3,
+    "doubleTapMaxMovement": 0.03
   },
   "profile": {
     "historyRowsShown": 50
@@ -58,6 +60,27 @@
     "chainCap": 5,
     "depthBonusPerRoom": 25
   },
+  "powerUps": {
+    "startRoom": 2,
+    "maxOnBoard": 1,
+    "solidSeconds": 8,
+    "fadeSeconds": 3,
+    "wildMinMultiplier": 2,
+    "shedWeightByTail": [
+      {
+        "fromLength": 6,
+        "multiplier": 0.5
+      },
+      {
+        "fromLength": 10,
+        "multiplier": 1
+      },
+      {
+        "fromLength": 16,
+        "multiplier": 2
+      }
+    ]
+  },
   "depthTiers": [
     {
       "fromDepth": 1,
@@ -86,6 +109,33 @@
         {
           "fruit": "Plum",
           "weight": 20
+        }
+      ],
+      "pickupChance": 0.0,
+      "pickupWeights": [
+        {
+          "powerUp": "Breaker",
+          "weight": 0
+        },
+        {
+          "powerUp": "Wild",
+          "weight": 50
+        },
+        {
+          "powerUp": "Brace",
+          "weight": 0
+        },
+        {
+          "powerUp": "SlowMo",
+          "weight": 0
+        },
+        {
+          "powerUp": "Shed",
+          "weight": 50
+        },
+        {
+          "powerUp": "Mystery",
+          "weight": 0
         }
       ]
     },
@@ -117,6 +167,33 @@
           "fruit": "Plum",
           "weight": 20
         }
+      ],
+      "pickupChance": 0.2,
+      "pickupWeights": [
+        {
+          "powerUp": "Breaker",
+          "weight": 0
+        },
+        {
+          "powerUp": "Wild",
+          "weight": 50
+        },
+        {
+          "powerUp": "Brace",
+          "weight": 0
+        },
+        {
+          "powerUp": "SlowMo",
+          "weight": 0
+        },
+        {
+          "powerUp": "Shed",
+          "weight": 50
+        },
+        {
+          "powerUp": "Mystery",
+          "weight": 0
+        }
       ]
     },
     {
@@ -146,6 +223,33 @@
         {
           "fruit": "Plum",
           "weight": 20
+        }
+      ],
+      "pickupChance": 0.2,
+      "pickupWeights": [
+        {
+          "powerUp": "Breaker",
+          "weight": 0
+        },
+        {
+          "powerUp": "Wild",
+          "weight": 50
+        },
+        {
+          "powerUp": "Brace",
+          "weight": 0
+        },
+        {
+          "powerUp": "SlowMo",
+          "weight": 0
+        },
+        {
+          "powerUp": "Shed",
+          "weight": 50
+        },
+        {
+          "powerUp": "Mystery",
+          "weight": 0
         }
       ]
     },
@@ -177,6 +281,33 @@
           "fruit": "Plum",
           "weight": 20
         }
+      ],
+      "pickupChance": 0.2,
+      "pickupWeights": [
+        {
+          "powerUp": "Breaker",
+          "weight": 0
+        },
+        {
+          "powerUp": "Wild",
+          "weight": 50
+        },
+        {
+          "powerUp": "Brace",
+          "weight": 0
+        },
+        {
+          "powerUp": "SlowMo",
+          "weight": 0
+        },
+        {
+          "powerUp": "Shed",
+          "weight": 50
+        },
+        {
+          "powerUp": "Mystery",
+          "weight": 0
+        }
       ]
     },
     {
@@ -206,6 +337,33 @@
         {
           "fruit": "Plum",
           "weight": 20
+        }
+      ],
+      "pickupChance": 0.2,
+      "pickupWeights": [
+        {
+          "powerUp": "Breaker",
+          "weight": 0
+        },
+        {
+          "powerUp": "Wild",
+          "weight": 50
+        },
+        {
+          "powerUp": "Brace",
+          "weight": 0
+        },
+        {
+          "powerUp": "SlowMo",
+          "weight": 0
+        },
+        {
+          "powerUp": "Shed",
+          "weight": 50
+        },
+        {
+          "powerUp": "Mystery",
+          "weight": 0
         }
       ]
     }
