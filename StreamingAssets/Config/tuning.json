@@ -66,6 +66,10 @@
     "solidSeconds": 8,
     "fadeSeconds": 3,
     "wildMinMultiplier": 2,
+    "braceAddSeconds": 8,
+    "bracePauseSeconds": 4,
+    "slowMoFactor": 0.5,
+    "slowMoSeconds": 5,
     "shedWeightByTail": [
       {
         "fromLength": 6,
@@ -172,7 +176,7 @@
       "pickupWeights": [
         {
           "powerUp": "Breaker",
-          "weight": 0
+          "weight": 30
         },
         {
           "powerUp": "Wild",
@@ -180,11 +184,11 @@
         },
         {
           "powerUp": "Brace",
-          "weight": 0
+          "weight": 40
         },
         {
           "powerUp": "SlowMo",
-          "weight": 0
+          "weight": 30
         },
         {
           "powerUp": "Shed",
@@ -192,7 +196,7 @@
         },
         {
           "powerUp": "Mystery",
-          "weight": 0
+          "weight": 20
         }
       ]
     },
@@ -229,7 +233,7 @@
       "pickupWeights": [
         {
           "powerUp": "Breaker",
-          "weight": 0
+          "weight": 30
         },
         {
           "powerUp": "Wild",
@@ -237,11 +241,11 @@
         },
         {
           "powerUp": "Brace",
-          "weight": 0
+          "weight": 40
         },
         {
           "powerUp": "SlowMo",
-          "weight": 0
+          "weight": 30
         },
         {
           "powerUp": "Shed",
@@ -249,7 +253,7 @@
         },
         {
           "powerUp": "Mystery",
-          "weight": 0
+          "weight": 20
         }
       ]
     },
@@ -286,7 +290,7 @@
       "pickupWeights": [
         {
           "powerUp": "Breaker",
-          "weight": 0
+          "weight": 30
         },
         {
           "powerUp": "Wild",
@@ -294,11 +298,11 @@
         },
         {
           "powerUp": "Brace",
-          "weight": 0
+          "weight": 40
         },
         {
           "powerUp": "SlowMo",
-          "weight": 0
+          "weight": 30
         },
         {
           "powerUp": "Shed",
@@ -306,7 +310,7 @@
         },
         {
           "powerUp": "Mystery",
-          "weight": 0
+          "weight": 20
         }
       ]
     },
@@ -343,7 +347,7 @@
       "pickupWeights": [
         {
           "powerUp": "Breaker",
-          "weight": 0
+          "weight": 30
         },
         {
           "powerUp": "Wild",
@@ -351,11 +355,11 @@
         },
         {
           "powerUp": "Brace",
-          "weight": 0
+          "weight": 40
         },
         {
           "powerUp": "SlowMo",
-          "weight": 0
+          "weight": 30
         },
         {
           "powerUp": "Shed",
@@ -363,7 +367,7 @@
         },
         {
           "powerUp": "Mystery",
-          "weight": 0
+          "weight": 20
         }
       ]
     }
