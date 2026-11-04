@@ -21,6 +21,8 @@
     <div id="game">
       <canvas id="unity-canvas" tabindex="-1"></canvas>
       <div id="loading">
+        <img id="loading-emblem" alt="" hidden>
+        <div id="loading-rank" hidden></div>
         <div id="loading-title">One Last Bite</div>
         <div id="loading-track"><div id="loading-fill"></div></div>
       </div>
@@ -32,6 +34,28 @@
         var loading = document.querySelector("#loading");
         var loadingFill = document.querySelector("#loading-fill");
         var errorBox = document.querySelector("#error");
+
+        function showRankEmblem() {
+          try {
+            var emblem = localStorage.getItem("oneLastBite.rankEmblem");
+            var rank = localStorage.getItem("oneLastBite.rankName");
+            if (emblem && emblem.indexOf("data:image/png;base64,") === 0) {
+              var image = document.querySelector("#loading-emblem");
+              image.src = emblem;
+              image.hidden = false;
+            }
+
+            if (rank) {
+              var label = document.querySelector("#loading-rank");
+              label.textContent = rank;
+              label.hidden = false;
+            }
+          } catch (problem) {
+            console.warn("Rank emblem unavailable", problem);
+          }
+        }
+
+        showRankEmblem();
 
         function preventDefault(event) {
           event.preventDefault();
@@ -88,9 +112,9 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/9c06a6b9973892fca27e231a085d5408.data",
-          frameworkUrl: buildUrl + "/808845ce27dd939c0f81ec45dbe86f4e.framework.js",
-          codeUrl: buildUrl + "/30843f2d8226d6c75580014602c410cd.wasm",
+          dataUrl: buildUrl + "/d16df2f44b1bf8e7f7f02a6e4a50d435.data",
+          frameworkUrl: buildUrl + "/a6670a14dda140b8c71549f5cd431bb6.framework.js",
+          codeUrl: buildUrl + "/7d04b73108e7c886e94ccbdf2c20705d.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "The Dragon's Lair Gaming Studio",
           productName: "One Last Bite",
@@ -101,7 +125,7 @@
         };
 
         var script = document.createElement("script");
-        script.src = buildUrl + "/242fc104ac7c33db8e8da835e20f6f8f.loader.js";
+        script.src = buildUrl + "/4b10299e2ff4a75951f4500c112908ba.loader.js";
         script.onload = function () {
           createUnityInstance(canvas, config, function (progress) {
             loadingFill.style.width = (100 * progress) + "%";
