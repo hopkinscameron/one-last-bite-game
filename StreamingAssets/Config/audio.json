@@ -1,0 +1,113 @@
+{
+  "effects": {
+    "volume": 0.6,
+    "chainSemitonesPerStep": 2,
+    "cues": [
+      {
+        "cue": "Eat",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Chain",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Door",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Bank",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Death",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Rumble",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Pickup",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "PickupFade",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "PickupExpire",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Activate",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Smash",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Brace",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "SlowMoStart",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "SlowMoEnd",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Reveal",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Tap",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "PlayTap",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "News",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "ThemeEntry",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Pause",
+        "clips": [],
+        "volume": 1
+      },
+      {
+        "cue": "Resume",
+        "clips": [],
+        "volume": 1
+      }
+    ]
+  }
+}
