@@ -1,3 +1,35 @@
 One Last Bite: sound effects
 
 Every sound below is public domain (Creative Commons CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/). Credit isn't required; it's listed so each file's source is known.
+
+Music
+
+menu: Crystal Cave (song18) by The Cynic Project (cynicmusic)
+  File: Music/menu.mp3
+  Source: https://opengameart.org/content/crystal-cave-song18
+  License: CC0 1.0
+
+garden: Crystal Cave (song18) by The Cynic Project (cynicmusic)
+  File: Music/menu.mp3
+  Source: https://opengameart.org/content/crystal-cave-song18
+  License: CC0 1.0
+
+burrow: Dark Forest Theme by The Cynic Project (cynicmusic)
+  File: Music/burrow.mp3
+  Source: https://opengameart.org/content/dark-forest-theme
+  License: CC0 1.0
+
+cavern: Village Ruins by isaiah658
+  File: Music/cavern.mp3
+  Source: https://opengameart.org/content/village-ruins
+  License: CC0 1.0
+
+ruins: Enchanted Tiki 86 by The Cynic Project (cynicmusic)
+  File: Music/ruins.mp3
+  Source: https://opengameart.org/content/enchanted-tiki-86
+  License: CC0 1.0
+
+hollow: Dark Cavern Ambient by Paul Wortmann
+  File: Music/hollow.mp3
+  Source: https://opengameart.org/content/dark-cavern-ambient
+  License: CC0 1.0

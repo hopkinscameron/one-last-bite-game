@@ -109,5 +109,70 @@
         "volume": 1
       }
     ]
+  },
+  "music": {
+    "volume": 0.5,
+    "crossfadeSeconds": 2,
+    "pauseVolume": 0.4,
+    "tempo": {
+      "fromRoom": 2,
+      "perRoom": 0.02,
+      "max": 1.25
+    },
+    "menu": {
+      "file": "Music/menu.mp3",
+      "volume": 1,
+      "title": "Crystal Cave (song18)",
+      "author": "The Cynic Project (cynicmusic)",
+      "source": "https://opengameart.org/content/crystal-cave-song18",
+      "license": "CC0 1.0"
+    },
+    "themes": [
+      {
+        "theme": "garden",
+        "file": "Music/menu.mp3",
+        "volume": 1,
+        "title": "Crystal Cave (song18)",
+        "author": "The Cynic Project (cynicmusic)",
+        "source": "https://opengameart.org/content/crystal-cave-song18",
+        "license": "CC0 1.0"
+      },
+      {
+        "theme": "burrow",
+        "file": "Music/burrow.mp3",
+        "volume": 1,
+        "title": "Dark Forest Theme",
+        "author": "The Cynic Project (cynicmusic)",
+        "source": "https://opengameart.org/content/dark-forest-theme",
+        "license": "CC0 1.0"
+      },
+      {
+        "theme": "cavern",
+        "file": "Music/cavern.mp3",
+        "volume": 1,
+        "title": "Village Ruins",
+        "author": "isaiah658",
+        "source": "https://opengameart.org/content/village-ruins",
+        "license": "CC0 1.0"
+      },
+      {
+        "theme": "ruins",
+        "file": "Music/ruins.mp3",
+        "volume": 1,
+        "title": "Enchanted Tiki 86",
+        "author": "The Cynic Project (cynicmusic)",
+        "source": "https://opengameart.org/content/enchanted-tiki-86",
+        "license": "CC0 1.0"
+      },
+      {
+        "theme": "hollow",
+        "file": "Music/hollow.mp3",
+        "volume": 1,
+        "title": "Dark Cavern Ambient",
+        "author": "Paul Wortmann",
+        "source": "https://opengameart.org/content/dark-cavern-ambient",
+        "license": "CC0 1.0"
+      }
+    ]
   }
 }
