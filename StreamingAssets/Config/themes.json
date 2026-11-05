@@ -76,6 +76,23 @@
       "lightAlpha": 0.16,
       "lightRadius": 3.2,
       "lightHeight": 0.4
+    },
+    "screens": {
+      "descent": ["#2b5126", "#261a12", "#151a27", "#0f0a1c"],
+      "descentStops": [0, 0.3, 0.62, 1],
+      "strata": [0.26, 0.44, 0.6, 0.76],
+      "strataShadowAlpha": 0.22,
+      "strataLineAlpha": 0.06,
+      "daylight": "#ffffe6",
+      "daylightAlpha": 0.1,
+      "accentGlowAlpha": 0.2,
+      "vignetteAlpha": 0.5,
+      "menuDim": 0.3,
+      "pageDim": 0.72,
+      "runDim": 0.86,
+      "motes": 28,
+      "moteAlpha": 0.18,
+      "moteTwinkle": 0.12
     }
   },
   "themes": [
