@@ -21,6 +21,7 @@
   <body>
     <div id="game">
       <canvas id="unity-canvas" tabindex="-1"></canvas>
+      <div id="safe-area-probe" aria-hidden="true"></div>
     </div>
     <div id="splash">
       <div class="splash-gap"></div>
@@ -100,7 +101,7 @@
         <img id="splash-emblem" alt="" hidden>
         <span class="splash-dim">Welcome back, <span id="splash-rank"></span></span>
       </div>
-      <p id="splash-version" class="splash-dim splash-small">v0.3.0 b24</p>
+      <p id="splash-version" class="splash-dim splash-small">v0.3.0 b25</p>
     </div>
     <div id="rotate" hidden>
       <svg id="rotate-phone" viewBox="0 0 100 100" aria-hidden="true">
@@ -164,6 +165,15 @@
         window.oneLastBiteHideSplash = hideSplash;
         window.oneLastBiteIsSideways = function () {
           return sideways.matches;
+        };
+
+        var safeAreaProbe = document.getElementById("safe-area-probe");
+        window.oneLastBiteSafeInset = function (side) {
+          var style = getComputedStyle(safeAreaProbe);
+          var vertical = side < 2;
+          var inset = parseFloat([style.paddingTop, style.paddingBottom, style.paddingLeft, style.paddingRight][side]) || 0;
+          var extent = vertical ? window.innerHeight : window.innerWidth;
+          return extent > 0 ? inset / extent : 0;
         };
 
         showWelcome();
@@ -235,9 +245,9 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/2e124414c0c374834748151474abf5a1.data",
-          frameworkUrl: buildUrl + "/b57219826bb411fea97ba5988590769a.framework.js",
-          codeUrl: buildUrl + "/577f71abc11b15dc5a4a808a7abbfe99.wasm",
+          dataUrl: buildUrl + "/a7bb6d9a3be504345d78734b326cd09b.data",
+          frameworkUrl: buildUrl + "/55b84517a9d87473bd333e2765c8f6f2.framework.js",
+          codeUrl: buildUrl + "/7312f9090b80e9eabe99173a0bc24a51.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "The Dragon's Lair Gaming Studio",
           productName: "One Last Bite",
@@ -248,7 +258,7 @@
         };
 
         var script = document.createElement("script");
-        script.src = buildUrl + "/58f90468db4e6f82049f34d938f5ad60.loader.js";
+        script.src = buildUrl + "/4595a31c50c1bbd1ace1592b6c286c41.loader.js";
         script.onload = function () {
           createUnityInstance(canvas, config, function (progress) {
             splashFill.style.width = (100 * loadShare * progress) + "%";
