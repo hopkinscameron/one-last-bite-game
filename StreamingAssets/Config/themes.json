@@ -1,0 +1,253 @@
+{
+  "look": {
+    "shadowScale": 0.5,
+    "surroundings": {
+      "wallTileAlpha": 0.38,
+      "darkeningInnerRadius": 0.42,
+      "darkeningOuterRadius": 0.62,
+      "darkeningFrom": 0.34,
+      "darkeningTo": 0.74,
+      "topWashAlpha": 0.1,
+      "bottomWashAlpha": 0.25,
+      "boardShadowAlpha": 0.75,
+      "boardShadowBlur": 1.4,
+      "boardShadowOffset": 0.25,
+      "rimAlpha": 0.35,
+      "rowUndersideTop": 0.2,
+      "rowUndersideFade": 0.55,
+      "rowUndersideDarken": 0.6
+    },
+    "walls": {
+      "innerShadowWidth": 0.45,
+      "innerShadowAlpha": 0.38,
+      "lipAlpha": 0.8,
+      "lipWidth": 0.07,
+      "leafyFloorOverhang": 0.1
+    },
+    "snowCap": {
+      "color": "#e9eff3",
+      "shadowAlpha": 0.28,
+      "shadowOffset": 0.05
+    },
+    "fruit": {
+      "contactShadowAlpha": 0.34,
+      "contactShadowFadeAtFullGlow": 0.6
+    },
+    "pickup": {
+      "disc": "#0a090ee0",
+      "ink": "#fdf7ea",
+      "contactShadowAlpha": 0.3
+    },
+    "door": {
+      "lightPoolRadius": 1.45,
+      "lightPoolScaleX": 1.2,
+      "lightPoolScaleY": 2.15,
+      "lightPoolCenterAlpha": 0.3,
+      "lightPoolMidAlpha": 0.12,
+      "lightPoolMidStop": 0.45,
+      "lightPoolPulseMid": 0.75
+    },
+    "pips": {
+      "socketRadius": 0.33,
+      "socketAlpha": 0.62,
+      "pipRadius": 0.21,
+      "emptyAlpha": 0.5
+    },
+    "caveIn": {
+      "floorTint": "#ff4632",
+      "floorTintAlpha": 0.09,
+      "safePathAlpha": 0.14,
+      "crack": "#ff5b4d",
+      "crackAlpha": 0.12,
+      "crackSteadyAlpha": 0.06
+    },
+    "vignette": {
+      "radius": 0.62,
+      "innerShare": 0.35
+    }
+  },
+  "themes": [
+    {
+      "id": "garden",
+      "name": "Garden",
+      "fromRoom": 1,
+      "colors": {
+        "background": "#121d0f",
+        "floorA": "#1d3118",
+        "floorB": "#22381b",
+        "wall": "#2d5327",
+        "wallHighlight": "#3f7236",
+        "wallShade": "#1c3618",
+        "obstacle": "#7b786d",
+        "obstacleHighlight": "#a19e91",
+        "door": "#2a1f14",
+        "doorOpen": "#fff0c2",
+        "doorFrame": "#8a8577",
+        "pip": "#fff0c2",
+        "text": "#f1f3e6",
+        "textDim": "#a7b29a",
+        "accent": "#f2c14e",
+        "hud": "#0e160bf0"
+      },
+      "floorPattern": "lawn",
+      "wallStyle": "hedge",
+      "obstacleStyle": "planter",
+      "fruitGlow": 0,
+      "vignette": 0.14,
+      "seasons": [
+        {
+          "id": "spring",
+          "months": [3, 4, 5],
+          "colors": { "floorA": "#1d3318", "floorB": "#22391b" },
+          "flowers": ["#f2b8c9", "#ffffff"],
+          "snowCap": false,
+          "surroundRow": { "cap": "#6e9467", "under": 0.96 }
+        },
+        {
+          "id": "summer",
+          "months": [6, 7, 8],
+          "colors": {},
+          "flowers": ["#ffffff", "#f6e7a8"],
+          "snowCap": false,
+          "surroundRow": { "cap": "#668f5f", "under": 1.0 }
+        },
+        {
+          "id": "autumn",
+          "months": [9, 10, 11],
+          "colors": { "floorA": "#28301a", "floorB": "#2c351c", "wall": "#47502a", "wallHighlight": "#6a6a32", "wallShade": "#2c3219" },
+          "flowers": [],
+          "snowCap": false,
+          "surroundRow": { "cap": "#8d8d63", "under": 0.97 }
+        },
+        {
+          "id": "winter",
+          "months": [12, 1, 2],
+          "colors": { "floorA": "#1d282b", "floorB": "#212d30", "wall": "#2c4636", "wallHighlight": "#3b5c47", "wallShade": "#1b2c22" },
+          "flowers": [],
+          "snowCap": true,
+          "surroundRow": { "cap": "none", "under": 0.2 }
+        }
+      ]
+    },
+    {
+      "id": "burrow",
+      "name": "Burrow",
+      "fromRoom": 4,
+      "colors": {
+        "background": "#16100b",
+        "floorA": "#241912",
+        "floorB": "#281c14",
+        "wall": "#4b3524",
+        "wallHighlight": "#634631",
+        "wallShade": "#2d1f15",
+        "obstacle": "#5b4130",
+        "obstacleHighlight": "#775840",
+        "door": "#1e140c",
+        "doorOpen": "#f2cf8a",
+        "doorFrame": "#7a5a3e",
+        "pip": "#e8c27a",
+        "text": "#f1e3cf",
+        "textDim": "#a8927a",
+        "accent": "#e8a95a",
+        "hud": "#140d08f0"
+      },
+      "floorPattern": "soil",
+      "wallStyle": "roots",
+      "obstacleStyle": "roots",
+      "fruitGlow": 0.25,
+      "vignette": 0.38,
+      "surroundRow": { "cap": "#7d6554", "under": 0.86 },
+      "seasons": []
+    },
+    {
+      "id": "cavern",
+      "name": "Cavern",
+      "fromRoom": 7,
+      "colors": {
+        "background": "#0d1017",
+        "floorA": "#161b25",
+        "floorB": "#191f2a",
+        "wall": "#2d3546",
+        "wallHighlight": "#414d66",
+        "wallShade": "#1b202c",
+        "obstacle": "#38435a",
+        "obstacleHighlight": "#52617f",
+        "door": "#0f121a",
+        "doorOpen": "#b8e0ff",
+        "doorFrame": "#56637e",
+        "pip": "#a6d6ff",
+        "text": "#e3ebf6",
+        "textDim": "#8a96a9",
+        "accent": "#7cc4ff",
+        "hud": "#0a0d13f0"
+      },
+      "floorPattern": "stone",
+      "wallStyle": "rock",
+      "obstacleStyle": "rock",
+      "fruitGlow": 0.7,
+      "vignette": 0.52,
+      "surroundRow": { "cap": "#6d768a", "under": 1.0 },
+      "seasons": []
+    },
+    {
+      "id": "ruins",
+      "name": "Ruins",
+      "fromRoom": 10,
+      "colors": {
+        "background": "#140f0c",
+        "floorA": "#211914",
+        "floorB": "#261d17",
+        "wall": "#5a4434",
+        "wallHighlight": "#76593f",
+        "wallShade": "#392a1f",
+        "obstacle": "#6a5240",
+        "obstacleHighlight": "#86684f",
+        "door": "#1c130b",
+        "doorOpen": "#ffd98f",
+        "doorFrame": "#9a7a58",
+        "pip": "#ffd283",
+        "text": "#f4e6d4",
+        "textDim": "#ab9682",
+        "accent": "#ffb347",
+        "hud": "#130d09f0"
+      },
+      "floorPattern": "flagstone",
+      "wallStyle": "brick",
+      "obstacleStyle": "brick",
+      "fruitGlow": 0.5,
+      "vignette": 0.46,
+      "surroundRow": { "cap": "#433224", "under": 1.0 },
+      "seasons": []
+    },
+    {
+      "id": "hollow",
+      "name": "Hollow",
+      "fromRoom": 13,
+      "colors": {
+        "background": "#0a0711",
+        "floorA": "#120d1c",
+        "floorB": "#150f21",
+        "wall": "#2a2040",
+        "wallHighlight": "#3d2e5d",
+        "wallShade": "#181227",
+        "obstacle": "#3a2c58",
+        "obstacleHighlight": "#5a4689",
+        "door": "#0c0814",
+        "doorOpen": "#dcc6ff",
+        "doorFrame": "#5e4a8a",
+        "pip": "#cdb0ff",
+        "text": "#ece4ff",
+        "textDim": "#968ab2",
+        "accent": "#b48cff",
+        "hud": "#09060ff0"
+      },
+      "floorPattern": "veins",
+      "wallStyle": "crystal",
+      "obstacleStyle": "crystal",
+      "fruitGlow": 1.0,
+      "vignette": 0.56,
+      "surroundRow": { "cap": "#4e406b", "under": 1.0 },
+      "seasons": []
+    }
+  ]
+}

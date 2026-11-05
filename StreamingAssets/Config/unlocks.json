@@ -407,7 +407,8 @@
         "head": "#FFFFFF",
         "body": "#EDE7F2",
         "pattern": "Alternate",
-        "accent": "#DCD3E6"
+        "accent": "#DCD3E6",
+        "finish": "Iridescent"
       },
       "prestige": true
     },
