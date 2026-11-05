@@ -14,7 +14,15 @@
   "input": {
     "minSwipeDistance": 0.05,
     "doubleTapSeconds": 0.3,
-    "doubleTapMaxMovement": 0.03
+    "doubleTapMaxMovement": 0.03,
+    "scrolling": {
+      "flickWindowSeconds": 0.1,
+      "minFlickSpeed": 300,
+      "maxSpeed": 9000,
+      "stopSpeed": 20,
+      "speedKeptPerSecond": 0.135,
+      "wheelLines": 3
+    }
   },
   "profile": {
     "historyRowsShown": 50
@@ -88,11 +96,11 @@
   "depthTiers": [
     {
       "fromDepth": 1,
-      "ticksPerSecond": 8,
-      "doorThreshold": 5,
+      "ticksPerSecond": 3,
+      "doorThreshold": 4,
       "layoutDifficulty": 1,
       "collapseSeconds": 30,
-      "ringIntervalSeconds": 2.0,
+      "ringIntervalSeconds": 3.0,
       "fruitWeights": [
         {
           "fruit": "Ember",
@@ -145,11 +153,11 @@
     },
     {
       "fromDepth": 2,
-      "ticksPerSecond": 8,
+      "ticksPerSecond": 3.75,
       "doorThreshold": 5,
       "layoutDifficulty": 2,
       "collapseSeconds": 30,
-      "ringIntervalSeconds": 2.0,
+      "ringIntervalSeconds": 3.0,
       "fruitWeights": [
         {
           "fruit": "Ember",
@@ -202,11 +210,11 @@
     },
     {
       "fromDepth": 3,
-      "ticksPerSecond": 8,
+      "ticksPerSecond": 4.5,
       "doorThreshold": 5,
       "layoutDifficulty": 3,
-      "collapseSeconds": 30,
-      "ringIntervalSeconds": 2.0,
+      "collapseSeconds": 28,
+      "ringIntervalSeconds": 2.75,
       "fruitWeights": [
         {
           "fruit": "Ember",
@@ -259,11 +267,68 @@
     },
     {
       "fromDepth": 4,
-      "ticksPerSecond": 9,
+      "ticksPerSecond": 5.25,
       "doorThreshold": 6,
       "layoutDifficulty": 4,
       "collapseSeconds": 27,
-      "ringIntervalSeconds": 1.75,
+      "ringIntervalSeconds": 2.5,
+      "fruitWeights": [
+        {
+          "fruit": "Ember",
+          "weight": 20
+        },
+        {
+          "fruit": "Sun",
+          "weight": 20
+        },
+        {
+          "fruit": "Sky",
+          "weight": 20
+        },
+        {
+          "fruit": "Leaf",
+          "weight": 20
+        },
+        {
+          "fruit": "Plum",
+          "weight": 20
+        }
+      ],
+      "pickupChance": 0.2,
+      "pickupWeights": [
+        {
+          "powerUp": "Breaker",
+          "weight": 30
+        },
+        {
+          "powerUp": "Wild",
+          "weight": 50
+        },
+        {
+          "powerUp": "Brace",
+          "weight": 40
+        },
+        {
+          "powerUp": "SlowMo",
+          "weight": 30
+        },
+        {
+          "powerUp": "Shed",
+          "weight": 50
+        },
+        {
+          "powerUp": "Mystery",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "fromDepth": 5,
+      "ticksPerSecond": 6,
+      "doorThreshold": 6,
+      "layoutDifficulty": 4,
+      "collapseSeconds": 27,
+      "ringIntervalSeconds": 2.5,
       "fruitWeights": [
         {
           "fruit": "Ember",
@@ -316,11 +381,11 @@
     },
     {
       "fromDepth": 6,
-      "ticksPerSecond": 10,
-      "doorThreshold": 7,
+      "ticksPerSecond": 7,
+      "doorThreshold": 6,
       "layoutDifficulty": 5,
-      "collapseSeconds": 24,
-      "ringIntervalSeconds": 1.5,
+      "collapseSeconds": 25,
+      "ringIntervalSeconds": 2.25,
       "fruitWeights": [
         {
           "fruit": "Ember",
@@ -372,12 +437,126 @@
       ]
     },
     {
-      "fromDepth": 10,
+      "fromDepth": 9,
+      "ticksPerSecond": 8,
+      "doorThreshold": 7,
+      "layoutDifficulty": 6,
+      "collapseSeconds": 23,
+      "ringIntervalSeconds": 2.0,
+      "fruitWeights": [
+        {
+          "fruit": "Ember",
+          "weight": 20
+        },
+        {
+          "fruit": "Sun",
+          "weight": 20
+        },
+        {
+          "fruit": "Sky",
+          "weight": 20
+        },
+        {
+          "fruit": "Leaf",
+          "weight": 20
+        },
+        {
+          "fruit": "Plum",
+          "weight": 20
+        }
+      ],
+      "pickupChance": 0.2,
+      "pickupWeights": [
+        {
+          "powerUp": "Breaker",
+          "weight": 30
+        },
+        {
+          "powerUp": "Wild",
+          "weight": 50
+        },
+        {
+          "powerUp": "Brace",
+          "weight": 40
+        },
+        {
+          "powerUp": "SlowMo",
+          "weight": 30
+        },
+        {
+          "powerUp": "Shed",
+          "weight": 50
+        },
+        {
+          "powerUp": "Mystery",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "fromDepth": 12,
+      "ticksPerSecond": 9.5,
+      "doorThreshold": 7,
+      "layoutDifficulty": 6,
+      "collapseSeconds": 21,
+      "ringIntervalSeconds": 1.75,
+      "fruitWeights": [
+        {
+          "fruit": "Ember",
+          "weight": 20
+        },
+        {
+          "fruit": "Sun",
+          "weight": 20
+        },
+        {
+          "fruit": "Sky",
+          "weight": 20
+        },
+        {
+          "fruit": "Leaf",
+          "weight": 20
+        },
+        {
+          "fruit": "Plum",
+          "weight": 20
+        }
+      ],
+      "pickupChance": 0.2,
+      "pickupWeights": [
+        {
+          "powerUp": "Breaker",
+          "weight": 30
+        },
+        {
+          "powerUp": "Wild",
+          "weight": 50
+        },
+        {
+          "powerUp": "Brace",
+          "weight": 40
+        },
+        {
+          "powerUp": "SlowMo",
+          "weight": 30
+        },
+        {
+          "powerUp": "Shed",
+          "weight": 50
+        },
+        {
+          "powerUp": "Mystery",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "fromDepth": 15,
       "ticksPerSecond": 11,
       "doorThreshold": 8,
       "layoutDifficulty": 6,
       "collapseSeconds": 20,
-      "ringIntervalSeconds": 1.25,
+      "ringIntervalSeconds": 1.5,
       "fruitWeights": [
         {
           "fruit": "Ember",
