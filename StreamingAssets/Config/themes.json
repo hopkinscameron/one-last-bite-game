@@ -64,6 +64,18 @@
     "vignette": {
       "radius": 0.62,
       "innerShare": 0.35
+    },
+    "torch": {
+      "bracket": "#241a12",
+      "cup": "#3a2a1c",
+      "flame": "#ffc46b",
+      "core": "#fff3d0",
+      "glow": "#ffbe64e6",
+      "glowBlur": 0.45,
+      "light": "#ffaa50",
+      "lightAlpha": 0.16,
+      "lightRadius": 3.2,
+      "lightHeight": 0.4
     }
   },
   "themes": [
@@ -94,6 +106,12 @@
       "obstacleStyle": "planter",
       "fruitGlow": 0,
       "vignette": 0.14,
+      "particles": [],
+      "critters": [
+        { "kind": "butterfly", "count": 2, "tilesPerSecond": 1.4, "pauseMin": 0, "pauseMax": 0, "wobble": 0.6, "wobbleRateX": 3, "wobbleRateY": 2.3, "colors": [{ "part": "wingA", "color": "#f4efe2" }, { "part": "wingB", "color": "#d7e2f6" }, { "part": "body", "color": "#2b2620" }] },
+        { "kind": "snail", "count": 1, "tilesPerSecond": 0.12, "pauseMin": 1, "pauseMax": 4, "wobble": 0, "wobbleRateX": 0, "wobbleRateY": 0, "colors": [{ "part": "body", "color": "#b9a98c" }, { "part": "shell", "color": "#8a6a48" }, { "part": "spiral", "color": "#5e4630" }] }
+      ],
+      "torches": [],
       "seasons": [
         {
           "id": "spring",
@@ -101,7 +119,8 @@
           "colors": { "floorA": "#1d3318", "floorB": "#22391b" },
           "flowers": ["#f2b8c9", "#ffffff"],
           "snowCap": false,
-          "surroundRow": { "cap": "#6e9467", "under": 0.96 }
+          "surroundRow": { "cap": "#6e9467", "under": 0.96 },
+          "particles": [{ "colors": ["#f2b8c9", "#f7d4de"], "count": 16, "alpha": 0.55, "radiusX": 0.11, "radiusY": 0.06, "fallSpeed": 0.55, "sway": 0.5, "swayRate": 1.6, "glow": 0, "twinkleRate": 0 }]
         },
         {
           "id": "summer",
@@ -109,7 +128,8 @@
           "colors": {},
           "flowers": ["#ffffff", "#f6e7a8"],
           "snowCap": false,
-          "surroundRow": { "cap": "#668f5f", "under": 1.0 }
+          "surroundRow": { "cap": "#668f5f", "under": 1.0 },
+          "particles": [{ "colors": ["#f5e6a8"], "count": 20, "alpha": 0.45, "radiusX": 0.04, "radiusY": 0.04, "fallSpeed": 0.12, "sway": 0.15, "swayRate": 0.7, "glow": 0, "twinkleRate": 0 }]
         },
         {
           "id": "autumn",
@@ -117,7 +137,8 @@
           "colors": { "floorA": "#28301a", "floorB": "#2c351c", "wall": "#47502a", "wallHighlight": "#6a6a32", "wallShade": "#2c3219" },
           "flowers": [],
           "snowCap": false,
-          "surroundRow": { "cap": "#8d8d63", "under": 0.97 }
+          "surroundRow": { "cap": "#8d8d63", "under": 0.97 },
+          "particles": [{ "colors": ["#a85a2a", "#c08a3a", "#7f4a2a"], "count": 16, "alpha": 0.6, "radiusX": 0.16, "radiusY": 0.08, "fallSpeed": 0.7, "sway": 0.5, "swayRate": 1.6, "glow": 0, "twinkleRate": 0 }]
         },
         {
           "id": "winter",
@@ -125,7 +146,8 @@
           "colors": { "floorA": "#1d282b", "floorB": "#212d30", "wall": "#2c4636", "wallHighlight": "#3b5c47", "wallShade": "#1b2c22" },
           "flowers": [],
           "snowCap": true,
-          "surroundRow": { "cap": "none", "under": 0.2 }
+          "surroundRow": { "cap": "none", "under": 0.2 },
+          "particles": [{ "colors": ["#eef3f6"], "count": 40, "alpha": 0.75, "radiusX": 0.07, "radiusY": 0.07, "fallSpeed": 0.9, "sway": 0.2, "swayRate": 1, "glow": 0, "twinkleRate": 0 }]
         }
       ]
     },
@@ -156,6 +178,9 @@
       "obstacleStyle": "roots",
       "fruitGlow": 0.25,
       "vignette": 0.38,
+      "particles": [{ "colors": ["#cfae86"], "count": 20, "alpha": 0.22, "radiusX": 0.04, "radiusY": 0.04, "fallSpeed": 0.05, "sway": 0.15, "swayRate": 0.7, "glow": 0, "twinkleRate": 0 }],
+      "critters": [{ "kind": "worm", "count": 3, "tilesPerSecond": 0.35, "pauseMin": 0, "pauseMax": 0, "wobble": 0, "wobbleRateX": 0, "wobbleRateY": 0, "colors": [{ "part": "body", "color": "#9a6b5a" }, { "part": "head", "color": "#b58472" }] }],
+      "torches": [],
       "surroundRow": { "cap": "#7d6554", "under": 0.86 },
       "seasons": []
     },
@@ -186,6 +211,9 @@
       "obstacleStyle": "rock",
       "fruitGlow": 0.7,
       "vignette": 0.52,
+      "particles": [{ "colors": ["#9cc8ff"], "count": 14, "alpha": 0.2, "radiusX": 0.06, "radiusY": 0.06, "fallSpeed": -0.25, "sway": 0.15, "swayRate": 0.7, "glow": 0.4, "twinkleRate": 0 }],
+      "critters": [{ "kind": "spider", "count": 2, "tilesPerSecond": 1.8, "pauseMin": 0.6, "pauseMax": 2.6, "wobble": 0, "wobbleRateX": 0, "wobbleRateY": 0, "colors": [{ "part": "legs", "color": "#5a6478" }, { "part": "body", "color": "#3c4456" }, { "part": "eyes", "color": "#8fa0c0" }] }],
+      "torches": [],
       "surroundRow": { "cap": "#6d768a", "under": 1.0 },
       "seasons": []
     },
@@ -216,6 +244,9 @@
       "obstacleStyle": "brick",
       "fruitGlow": 0.5,
       "vignette": 0.46,
+      "particles": [{ "colors": ["#ffb347", "#f0a35e"], "count": 14, "alpha": 0.5, "radiusX": 0.04, "radiusY": 0.04, "fallSpeed": -0.6, "sway": 0.15, "swayRate": 0.7, "glow": 0.4, "twinkleRate": 9 }],
+      "critters": [{ "kind": "beetle", "count": 3, "tilesPerSecond": 0.6, "pauseMin": 0, "pauseMax": 1.5, "wobble": 0, "wobbleRateX": 0, "wobbleRateY": 0, "colors": [{ "part": "legs", "color": "#4a3a22" }, { "part": "shell", "color": "#8a6a3a" }, { "part": "head", "color": "#5c4626" }] }],
+      "torches": [{ "column": 0, "row": 6 }, { "column": 14, "row": 6 }, { "column": 0, "row": 16 }, { "column": 14, "row": 16 }],
       "surroundRow": { "cap": "#433224", "under": 1.0 },
       "seasons": []
     },
@@ -246,6 +277,9 @@
       "obstacleStyle": "crystal",
       "fruitGlow": 1.0,
       "vignette": 0.56,
+      "particles": [{ "colors": ["#b48cff", "#d6c2ff"], "count": 26, "alpha": 0.32, "radiusX": 0.06, "radiusY": 0.06, "fallSpeed": -0.25, "sway": 0.15, "swayRate": 0.7, "glow": 0.4, "twinkleRate": 0 }],
+      "critters": [{ "kind": "wisp", "count": 3, "tilesPerSecond": 0.45, "pauseMin": 0, "pauseMax": 0, "wobble": 0.3, "wobbleRateX": 1.2, "wobbleRateY": 0, "colors": [{ "part": "glow", "color": "#e1d2ff" }, { "part": "core", "color": "#f5eeff" }] }],
+      "torches": [],
       "surroundRow": { "cap": "#4e406b", "under": 1.0 },
       "seasons": []
     }
