@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>One Last Bite</title>
     <meta name="description" content="Endless room-based snake. Bank your bite before the room caves in.">
-    <meta name="theme-color" content="#141419">
+    <meta name="theme-color" content="#0f0a1c">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="One Last Bite">
@@ -16,46 +16,163 @@
     <link rel="icon" type="image/png" sizes="192x192" href="TemplateData/icons/icon-192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="TemplateData/icons/apple-touch-icon.png">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>:root{--splash-accent:#f2c14e;--splash-accent-hi:#f6d280;--splash-glow:rgba(242,193,78,0.45);--splash-halo:rgba(242,193,78,0.18);--splash-text:#f1f3e6;--splash-dim:#a7b29a;}</style>
   </head>
   <body>
     <div id="game">
       <canvas id="unity-canvas" tabindex="-1"></canvas>
-      <div id="loading">
-        <img id="loading-emblem" alt="" hidden>
-        <div id="loading-rank" hidden></div>
-        <div id="loading-title">One Last Bite</div>
-        <div id="loading-track"><div id="loading-fill"></div></div>
-      </div>
-      <div id="error" hidden></div>
     </div>
+    <div id="splash">
+      <div class="splash-gap"></div>
+      <div id="splash-icon"><div class="splash-icon-art">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>One Last Bite</title>
+  <defs>
+    <linearGradient id="ic-descent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f5a2a"/><stop offset="0.35" stop-color="#2a1d14"/><stop offset="0.7" stop-color="#171c2a"/><stop offset="1" stop-color="#150f24"/>
+    </linearGradient>
+    <radialGradient id="ic-sky" gradientUnits="userSpaceOnUse" cx="256" cy="-51.2" r="460.8">
+      <stop offset="0" stop-color="#ffffe6" stop-opacity="0.12"/><stop offset="1" stop-color="#ffffe6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ic-vig" gradientUnits="userSpaceOnUse" cx="256" cy="281.6" r="435.2">
+      <stop offset="0.5294" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.35"/>
+    </radialGradient>
+    <radialGradient id="ic-halo" gradientUnits="userSpaceOnUse" cx="256" cy="271.36" r="245.76">
+      <stop offset="0.1250" stop-color="#ff8c3c" stop-opacity="0.3"/><stop offset="1" stop-color="#ff8c3c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ic-apple" gradientUnits="userSpaceOnUse" cx="256" cy="271.36" r="107.52" fx="217.09" fy="228.35" fr="5.12">
+      <stop offset="0" stop-color="#f2843a"/><stop offset="0.5" stop-color="#D55E00"/><stop offset="1" stop-color="#9e4300"/>
+    </radialGradient>
+    <linearGradient id="ic-leaf" gradientUnits="userSpaceOnUse" x1="0" y1="-12.29" x2="0" y2="12.29">
+      <stop offset="0" stop-color="#8fd46c"/><stop offset="1" stop-color="#4f9a3c"/>
+    </linearGradient>
+    <clipPath id="ic-fruitClip"><circle cx="256" cy="271.36" r="102.4"/></clipPath>
+    <clipPath id="ic-headClip"><ellipse cx="360.32" cy="138.45" rx="35.84" ry="29.7" transform="rotate(398.13 360.32 138.45)"/></clipPath>
+    <mask id="ic-bite" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <rect width="512" height="512" fill="#fff"/><circle cx="295.26" cy="174.57" r="30.72" fill="#000"/><circle cx="329.86" cy="197.5" r="30.72" fill="#000"/><circle cx="352.79" cy="232.1" r="30.72" fill="#000"/>
+    </mask>
+    <filter id="ic-coilShadow" filterUnits="userSpaceOnUse" x="-64" y="-64" width="640" height="640"><feDropShadow dx="0" dy="10.24" stdDeviation="8.96" flood-color="#000" flood-opacity="0.5"/></filter>
+    <filter id="ic-headShadow" filterUnits="userSpaceOnUse" x="-64" y="-64" width="640" height="640"><feDropShadow dx="0" dy="6.14" stdDeviation="7.68" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+  <rect width="512" height="512" fill="url(#ic-descent)"/>
+  <path d="M0 159.74 C153.6 144.38 358.4 175.1 512 159.74" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="7.17"/>
+  <path d="M0 153.6 C153.6 138.24 358.4 168.96 512 153.6" fill="none" stroke="#fff" stroke-opacity="0.08" stroke-width="4.1"/>
+  <path d="M0 272.38 C153.6 257.02 358.4 287.74 512 272.38" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="7.17"/>
+  <path d="M0 266.24 C153.6 250.88 358.4 281.6 512 266.24" fill="none" stroke="#fff" stroke-opacity="0.08" stroke-width="4.1"/>
+  <path d="M0 385.02 C153.6 369.66 358.4 400.38 512 385.02" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="7.17"/>
+  <path d="M0 378.88 C153.6 363.52 358.4 394.24 512 378.88" fill="none" stroke="#fff" stroke-opacity="0.08" stroke-width="4.1"/>
+  <rect width="512" height="512" fill="url(#ic-sky)"/>
+  <rect width="512" height="512" fill="url(#ic-vig)"/>
+  <rect width="512" height="512" fill="url(#ic-halo)"/>
+  <g mask="url(#ic-bite)">
+    <circle cx="256" cy="271.36" r="102.4" fill="url(#ic-apple)"/>
+    <ellipse cx="220.16" cy="232.45" rx="32.77" ry="18.43" transform="rotate(-34.38 220.16 232.45)" fill="#fff" fill-opacity="0.35"/>
+    <circle cx="204.8" cy="224.26" r="6.14" fill="#fff" fill-opacity="0.8"/>
+    <g clip-path="url(#ic-fruitClip)"><circle cx="295.26" cy="174.57" r="40.96" fill="#ffd9a6"/><circle cx="329.86" cy="197.5" r="40.96" fill="#ffd9a6"/><circle cx="352.79" cy="232.1" r="40.96" fill="#ffd9a6"/><circle cx="295.26" cy="174.57" r="34.82" fill="#f3c58e"/><circle cx="329.86" cy="197.5" r="34.82" fill="#f3c58e"/><circle cx="352.79" cy="232.1" r="34.82" fill="#f3c58e"/></g>
+  </g>
+  <path d="M195.18 210.54 Q172.36 196.06 166.21 181.57" fill="none" stroke="#5b3d26" stroke-width="12.29" stroke-linecap="round"/>
+  <g transform="translate(174.9 190.26) rotate(154.22)">
+    <path d="M0 0 Q23.04 -17.41 51.2 0 Q23.04 17.41 0 0Z" fill="url(#ic-leaf)"/>
+    <path d="M4.1 0 L44.03 0" stroke="#1e3c14" stroke-opacity="0.45" stroke-width="3.07"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <g filter="url(#ic-coilShadow)"><path d="M372.15 394.06 A168.96 168.96 0 1 1 346.53 128.7" stroke="#3a3226" stroke-width="66.56"/><path d="M424.63 281.97 A168.96 168.96 0 0 1 422.89 297.71" stroke="#3a3226" stroke-width="22.88"/><path d="M422.89 297.71 A168.96 168.96 0 0 1 419.69 313.22" stroke="#3a3226" stroke-width="28.7"/><path d="M419.69 313.22 A168.96 168.96 0 0 1 415.06 328.36" stroke="#3a3226" stroke-width="34.53"/><path d="M415.06 328.36 A168.96 168.96 0 0 1 409.02 343" stroke="#3a3226" stroke-width="40.35"/><path d="M409.02 343 A168.96 168.96 0 0 1 401.64 357.01" stroke="#3a3226" stroke-width="46.18"/><path d="M401.64 357.01 A168.96 168.96 0 0 1 392.99 370.26" stroke="#3a3226" stroke-width="52"/><path d="M392.99 370.26 A168.96 168.96 0 0 1 383.13 382.65" stroke="#3a3226" stroke-width="57.82"/><path d="M383.13 382.65 A168.96 168.96 0 0 1 372.15 394.06" stroke="#3a3226" stroke-width="63.65"/></g>
+    <path d="M372.15 394.06 A168.96 168.96 0 1 1 346.53 128.7" stroke="#cbbd9c" stroke-width="51.2"/><path d="M424.63 281.97 A168.96 168.96 0 0 1 422.89 297.71" stroke="#cbbd9c" stroke-width="15.68"/><path d="M422.89 297.71 A168.96 168.96 0 0 1 419.69 313.22" stroke="#cbbd9c" stroke-width="20.42"/><path d="M419.69 313.22 A168.96 168.96 0 0 1 415.06 328.36" stroke="#cbbd9c" stroke-width="25.15"/><path d="M415.06 328.36 A168.96 168.96 0 0 1 409.02 343" stroke="#cbbd9c" stroke-width="29.89"/><path d="M409.02 343 A168.96 168.96 0 0 1 401.64 357.01" stroke="#cbbd9c" stroke-width="34.62"/><path d="M401.64 357.01 A168.96 168.96 0 0 1 392.99 370.26" stroke="#cbbd9c" stroke-width="39.36"/><path d="M392.99 370.26 A168.96 168.96 0 0 1 383.13 382.65" stroke="#cbbd9c" stroke-width="44.1"/><path d="M383.13 382.65 A168.96 168.96 0 0 1 372.15 394.06" stroke="#cbbd9c" stroke-width="48.83"/>
+    <path d="M368.05 389.97 A168.96 168.96 0 1 1 342.44 124.61" stroke="#e8dcc0" stroke-width="39.73"/><path d="M420.53 277.87 A168.96 168.96 0 0 1 418.8 293.61" stroke="#e8dcc0" stroke-width="9.93"/><path d="M418.8 293.61 A168.96 168.96 0 0 1 415.6 309.12" stroke="#e8dcc0" stroke-width="13.91"/><path d="M415.6 309.12 A168.96 168.96 0 0 1 410.96 324.26" stroke="#e8dcc0" stroke-width="17.88"/><path d="M410.96 324.26 A168.96 168.96 0 0 1 404.93 338.9" stroke="#e8dcc0" stroke-width="21.85"/><path d="M404.93 338.9 A168.96 168.96 0 0 1 397.55 352.91" stroke="#e8dcc0" stroke-width="25.83"/><path d="M397.55 352.91 A168.96 168.96 0 0 1 388.89 366.17" stroke="#e8dcc0" stroke-width="29.8"/><path d="M388.89 366.17 A168.96 168.96 0 0 1 379.03 378.56" stroke="#e8dcc0" stroke-width="33.77"/><path d="M379.03 378.56 A168.96 168.96 0 0 1 368.05 389.97" stroke="#e8dcc0" stroke-width="37.74"/>
+    <path d="M406.23 348.68 A168.96 168.96 0 1 1 346.53 128.7" stroke="#f8f0de" stroke-opacity="0.75" stroke-width="17.92"/>
+    <path d="M363.14 385.05 A168.96 168.96 0 1 1 330.28 115.34" stroke="#fff" stroke-opacity="0.35" stroke-width="6.14"/>
+    <path d="M385.97 163.4 A168.96 168.96 0 0 1 403.35 188.68 M403.35 188.68 L415.94 197.47 M403.35 188.68 L404.29 204.01" stroke="#e04a5f" stroke-width="8.19" stroke-linejoin="round"/>
+  </g>
+  <ellipse cx="360.32" cy="138.45" rx="43.52" ry="36.86" transform="rotate(398.13 360.32 138.45)" fill="#3a3226" filter="url(#ic-headShadow)"/>
+  <ellipse cx="360.32" cy="138.45" rx="35.84" ry="29.7" transform="rotate(398.13 360.32 138.45)" fill="#cbbd9c"/>
+  <ellipse cx="353.77" cy="131.9" rx="35.84" ry="29.7" transform="rotate(398.13 353.77 131.9)" fill="#e8dcc0" clip-path="url(#ic-headClip)"/>
+  <circle cx="378.67" cy="133.33" r="9.73" fill="#fff"/><circle cx="381.49" cy="135.54" r="5.63" fill="#15131a"/><circle cx="379.44" cy="132.98" r="2.05" fill="#fff"/>
+  <circle cx="359.7" cy="157.49" r="9.73" fill="#fff"/><circle cx="362.52" cy="159.7" r="5.63" fill="#15131a"/><circle cx="360.47" cy="157.14" r="2.05" fill="#fff"/>
+</svg>
+      </div></div>
+      <div id="splash-wordmark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 277.46 190" role="img" aria-label="One Last Bite"><defs><path id="wm-top" d="M35.11 69.88 Q29.8 64.36 29.8 53.77 Q29.8 43.18 35.17 37.72 Q40.54 32.26 49.03 32.26 Q57.52 32.26 62.74 37.63 Q67.96 43 67.96 53.89 Q67.96 64.78 62.62 70.09 Q57.28 75.4 48.85 75.4 Q40.42 75.4 35.11 69.88 ZM44.05 46.42 Q42.1 49.06 42.1 53.83 Q42.1 58.6 43.96 61.15 Q45.82 63.7 48.85 63.7 Q51.88 63.7 53.77 61.12 Q55.66 58.54 55.66 53.74 Q55.66 48.94 53.71 46.36 Q51.76 43.78 48.88 43.78 Q46 43.78 44.05 46.42 ZM85 74.44 Q85 74.86 80.68 74.86 Q74.68 74.68 74.68 74.2 L74.68 54.76 L73.12 54.76 Q71.56 54.76 71.08 52.12 Q70.96 51.34 70.96 50.56 Q70.96 48.7 71.68 46.84 Q72.76 44.2 75.04 44.2 Q77.32 44.2 79.12 45.28 Q80.92 46.36 81.52 47.44 Q85.3 44.2 90.52 44.2 Q95.74 44.2 98.08 47.02 Q100.42 49.84 100.42 56.26 L100.42 74.26 Q100.42 74.98 95.29 74.98 Q90.16 74.98 90.16 74.26 L90.16 56.92 Q90.16 53.92 88.06 53.92 Q87.46 53.92 86.38 54.43 Q85.3 54.94 85 55.18 L85 74.44 ZM128.2 73.18 Q124.42 75.4 118.48 75.4 Q112.54 75.4 108.46 71.35 Q104.38 67.3 104.38 60.13 Q104.38 52.96 108.31 48.58 Q112.24 44.2 118.24 44.2 Q124.24 44.2 127.51 47.26 Q130.78 50.32 130.78 54.7 Q130.78 64.42 119.62 64.42 L115.48 64.42 Q115.48 66.22 116.47 66.91 Q117.46 67.6 119.38 67.6 Q123.58 67.6 127.36 65.68 Q127.42 65.62 127.9 66.52 Q129.34 69.1 129.34 70.87 Q129.34 72.64 128.2 73.18 ZM120.7 55.84 Q120.7 53.32 118.24 53.32 Q117.1 53.32 116.29 54.01 Q115.48 54.7 115.48 56.02 L115.48 57.88 L118.72 57.88 Q120.7 57.88 120.7 55.84 ZM145.66 71.26 L145.66 33.94 Q145.66 32.68 151.75 32.68 Q157.84 32.68 157.84 33.94 L157.84 63.34 L167.08 63.34 Q168.16 63.34 168.58 66.16 Q168.76 67.54 168.76 68.98 Q168.76 70.42 168.58 71.92 Q168.1 74.8 167.02 74.8 L148.54 74.8 Q147.22 74.8 146.44 73.72 Q145.66 72.64 145.66 71.26 ZM175.84 53.02 Q174.16 50.02 174.16 48.13 Q174.16 46.24 175.18 45.7 Q178.6 44.2 184.57 44.2 Q190.54 44.2 193 46.99 Q195.46 49.78 195.46 55.24 L195.46 64.72 L197.5 64.72 Q198.52 64.72 199.09 65.92 Q199.66 67.12 199.66 69.22 Q199.66 71.32 198.61 73.36 Q197.56 75.4 195.76 75.4 Q192.52 75.4 190.54 73.66 Q189.64 72.94 189.16 71.92 Q186.4 75.4 180.58 75.4 Q176.2 75.4 173.2 72.28 Q170.2 69.16 170.2 64.9 Q170.2 55.12 181.9 55.12 L185.2 55.12 L185.2 54.52 Q185.2 52.96 184.69 52.51 Q184.18 52.06 182.32 52.06 Q180.04 52.06 175.84 53.02 ZM180.64 64.06 Q180.64 65.38 181.36 66.07 Q182.08 66.76 183.19 66.76 Q184.3 66.76 185.2 65.86 L185.2 61.24 L183.52 61.24 Q180.64 61.24 180.64 64.06 ZM204.34 64 Q209.2 66.94 212.02 66.94 Q213.82 66.94 213.82 65.68 Q213.82 64.78 210.7 63.34 Q203.2 60.28 203.2 53.32 Q203.2 48.88 206.44 46.54 Q209.68 44.2 214.21 44.2 Q218.74 44.2 221.89 45.16 Q225.04 46.12 225.04 47.68 Q225.04 49 223.75 51.16 Q222.46 53.32 221.98 53.5 Q219.4 52.06 216.4 52.06 Q214.78 52.06 214.78 53.2 Q214.78 53.92 215.41 54.43 Q216.04 54.94 217.72 55.69 Q219.4 56.44 220.51 57.04 Q221.62 57.64 223 58.72 Q225.88 61 225.88 64.66 Q225.88 69.46 222.7 72.43 Q219.52 75.4 213.1 75.4 Q208.84 75.4 205.36 73.96 Q201.88 72.52 201.88 70 Q201.88 68.32 202.69 66.46 Q203.5 64.6 204.34 64 ZM243.88 74.44 Q243.88 75.16 238.84 75.16 Q232.84 74.92 232.84 74.38 L232.84 53.14 L229.78 53.14 Q228.58 53.14 228.58 49 Q228.58 47.92 228.79 46.36 Q229 44.8 229.66 44.8 L232.84 44.8 L232.84 39.52 Q232.84 38.32 237.91 38.32 Q242.98 38.32 242.98 39.28 L242.98 43.12 L243.04 44.8 L248.14 44.8 Q249.16 44.8 249.16 49 Q249.16 53.2 248.14 53.2 L243.88 53.2 L243.88 74.44 Z"/><linearGradient id="wm-top-fill" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="31.6" y2="74.8"><stop offset="0" stop-color="#f8f9f3"/><stop offset="1" stop-color="#f1f3e6"/></linearGradient><path id="wm-bottom" d="M106.78 120.9 Q106.78 131.3 97.78 136.7 Q102.68 138.5 105.98 142.9 Q109.28 147.3 109.28 155.35 Q109.28 163.4 103.33 168.1 Q97.38 172.8 86.28 172.8 L62.68 172.8 Q60.98 172.8 59.88 171.65 Q58.78 170.5 58.78 168.6 L58.78 104.6 Q58.78 103.5 59.13 103.15 Q59.48 102.8 60.58 102.8 L83.38 102.8 Q106.78 102.8 106.78 120.9 ZM77.98 119 L77.98 132.1 L78.48 132.1 Q88.08 132.1 88.08 125.7 Q88.08 122.2 86.23 120.6 Q84.38 119 80.08 119 L77.98 119 ZM77.98 143.9 L77.98 156.9 L79.78 156.9 Q84.08 156.9 86.08 155.3 Q88.08 153.7 88.08 150.2 Q88.08 146.7 86.23 145.3 Q84.38 143.9 80.08 143.9 L77.98 143.9 ZM134.88 172.2 Q134.88 173 125.73 173 Q116.58 173 116.58 172.3 L116.58 123.2 Q116.58 122.5 125.73 122.5 Q134.88 122.5 134.88 123.1 L134.88 172.2 ZM134.88 117.2 Q134.88 117.9 125.73 117.9 Q116.58 117.9 116.58 117.3 L116.58 102.9 Q116.58 101.9 125.73 101.9 Q134.88 101.9 134.88 102.5 L134.88 117.2 ZM166.88 172.2 Q166.88 173.4 158.48 173.4 Q148.48 173 148.48 172.1 L148.48 136.7 L143.38 136.7 Q141.38 136.7 141.38 129.8 Q141.38 128 141.73 125.4 Q142.08 122.8 143.18 122.8 L148.48 122.8 L148.48 114 Q148.48 112 156.93 112 Q165.38 112 165.38 113.6 L165.38 120 L165.48 122.8 L173.98 122.8 Q175.68 122.8 175.68 129.8 Q175.68 136.8 173.98 136.8 L166.88 136.8 L166.88 172.2 ZM218.48 170.1 Q212.18 173.8 202.28 173.8 Q192.38 173.8 185.58 167.05 Q178.78 160.3 178.78 148.35 Q178.78 136.4 185.33 129.1 Q191.88 121.8 201.88 121.8 Q211.88 121.8 217.33 126.9 Q222.78 132 222.78 139.3 Q222.78 155.5 204.18 155.5 L197.28 155.5 Q197.28 158.5 198.93 159.65 Q200.58 160.8 203.78 160.8 Q210.78 160.8 217.08 157.6 Q217.18 157.5 217.98 159 Q220.38 163.3 220.38 166.25 Q220.38 169.2 218.48 170.1 ZM205.98 141.2 Q205.98 137 201.88 137 Q199.98 137 198.63 138.15 Q197.28 139.3 197.28 141.5 L197.28 144.6 L202.68 144.6 Q205.98 144.6 205.98 141.2 Z"/><linearGradient id="wm-bottom-fill" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="100.8" y2="172.8"><stop offset="0" stop-color="#f7d991"/><stop offset="1" stop-color="#f2c14e"/></linearGradient><mask id="wm-bite" maskUnits="userSpaceOnUse" x="0" y="0" width="277.46" height="190"><rect width="277.46" height="190" fill="#fff"/><circle cx="221.78" cy="112.8" r="15" fill="#000"/><circle cx="230.78" cy="134.8" r="15" fill="#000"/></mask><mask id="wm-rim" maskUnits="userSpaceOnUse" x="0" y="0" width="277.46" height="190"><g fill="#fff" stroke="#fff" stroke-linejoin="round"><g stroke-width="7.8"><use href="#wm-top" y="4.5"/><use href="#wm-top" y="3.58"/><use href="#wm-top" y="2.65"/><use href="#wm-top" y="1.73"/><use href="#wm-top" y="0.8"/></g><g stroke-width="13"><use href="#wm-bottom" y="7.5"/><use href="#wm-bottom" y="6.58"/><use href="#wm-bottom" y="5.65"/><use href="#wm-bottom" y="4.73"/><use href="#wm-bottom" y="3.8"/><use href="#wm-bottom" y="2.88"/><use href="#wm-bottom" y="1.95"/><use href="#wm-bottom" y="1.03"/><use href="#wm-bottom" y="0.1"/></g></g><circle cx="221.78" cy="112.8" r="15" fill="#000"/><circle cx="230.78" cy="134.8" r="15" fill="#000"/></mask></defs><g mask="url(#wm-bite)"><g fill="#080d07" stroke="#080d07" stroke-linejoin="round"><g stroke-width="7.8"><use href="#wm-top" y="4.5"/><use href="#wm-top" y="3.58"/><use href="#wm-top" y="2.65"/><use href="#wm-top" y="1.73"/><use href="#wm-top" y="0.8"/></g></g><use href="#wm-top" fill="url(#wm-top-fill)"/><g fill="#443616" stroke="#443616" stroke-linejoin="round"><g stroke-width="13"><use href="#wm-bottom" y="7.5"/><use href="#wm-bottom" y="6.58"/><use href="#wm-bottom" y="5.65"/><use href="#wm-bottom" y="4.73"/><use href="#wm-bottom" y="3.8"/><use href="#wm-bottom" y="2.88"/><use href="#wm-bottom" y="1.95"/><use href="#wm-bottom" y="1.03"/><use href="#wm-bottom" y="0.1"/></g></g><use href="#wm-bottom" fill="url(#wm-bottom-fill)"/></g><g mask="url(#wm-rim)" fill="none" stroke="#443616" stroke-width="11"><circle cx="221.78" cy="112.8" r="15"/><circle cx="230.78" cy="134.8" r="15"/></g></svg></div>
+      <div id="splash-loading">
+        <div id="splash-track"><div id="splash-fill"></div></div>
+        <p class="splash-dim splash-small">Loading</p>
+      </div>
+      <div class="splash-gap"></div>
+      <div id="splash-welcome" hidden>
+        <img id="splash-emblem" alt="" hidden>
+        <span class="splash-dim">Welcome back, <span id="splash-rank"></span></span>
+      </div>
+      <p id="splash-version" class="splash-dim splash-small">v0.3.0 b24</p>
+    </div>
+    <div id="rotate" hidden>
+      <svg id="rotate-phone" viewBox="0 0 100 100" aria-hidden="true">
+        <g class="rotate-turn">
+          <rect x="32" y="14" width="36" height="72" rx="7" fill="none" stroke="currentColor" stroke-width="5"/>
+          <line x1="44" y1="76" x2="56" y2="76" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <p>Turn your phone upright</p>
+    </div>
+    <div id="error" hidden></div>
     <script>
       (function () {
         var canvas = document.querySelector("#unity-canvas");
-        var loading = document.querySelector("#loading");
-        var loadingFill = document.querySelector("#loading-fill");
+        var splash = document.querySelector("#splash");
+        var splashFill = document.querySelector("#splash-fill");
+        var rotate = document.querySelector("#rotate");
         var errorBox = document.querySelector("#error");
+        var loadShare = 0.9;
+        var splashFadeMilliseconds = 300;
+        var splashFallbackMilliseconds = 8000;
+        var sideways = window.matchMedia("(orientation: landscape) and (pointer: coarse) and (max-height: 600px)");
 
-        function showRankEmblem() {
+        function showWelcome() {
           try {
             var emblem = localStorage.getItem("oneLastBite.rankEmblem");
             var rank = localStorage.getItem("oneLastBite.rankName");
+            if (!rank) {
+              return;
+            }
+
+            document.querySelector("#splash-rank").textContent = rank;
             if (emblem && emblem.indexOf("data:image/png;base64,") === 0) {
-              var image = document.querySelector("#loading-emblem");
+              var image = document.querySelector("#splash-emblem");
               image.src = emblem;
               image.hidden = false;
             }
 
-            if (rank) {
-              var label = document.querySelector("#loading-rank");
-              label.textContent = rank;
-              label.hidden = false;
-            }
+            document.querySelector("#splash-welcome").hidden = false;
           } catch (problem) {
             console.warn("Rank emblem unavailable", problem);
           }
         }
 
-        showRankEmblem();
+        function hideSplash() {
+          if (splash.classList.contains("leaving")) {
+            return;
+          }
+
+          splashFill.style.width = "100%";
+          splash.classList.add("leaving");
+          setTimeout(function () {
+            splash.hidden = true;
+          }, splashFadeMilliseconds);
+        }
+
+        function syncRotatePrompt() {
+          rotate.hidden = !sideways.matches;
+        }
+
+        window.oneLastBiteHideSplash = hideSplash;
+        window.oneLastBiteIsSideways = function () {
+          return sideways.matches;
+        };
+
+        showWelcome();
+        syncRotatePrompt();
+        if (sideways.addEventListener) {
+          sideways.addEventListener("change", syncRotatePrompt);
+        } else {
+          sideways.addListener(syncRotatePrompt);
+        }
 
         function isSelectable(event) {
           return event.target instanceof Element && event.target.closest("[data-selectable]") !== null;
@@ -118,9 +235,9 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/75b58d58c181744e1678bad780ebb2c8.data",
-          frameworkUrl: buildUrl + "/b48fa1f2e2d957404b7d5f7f50416483.framework.js",
-          codeUrl: buildUrl + "/cecbdf62e6224930bcfcdf258f0d62af.wasm",
+          dataUrl: buildUrl + "/2e124414c0c374834748151474abf5a1.data",
+          frameworkUrl: buildUrl + "/b57219826bb411fea97ba5988590769a.framework.js",
+          codeUrl: buildUrl + "/577f71abc11b15dc5a4a808a7abbfe99.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "The Dragon's Lair Gaming Studio",
           productName: "One Last Bite",
@@ -131,13 +248,13 @@
         };
 
         var script = document.createElement("script");
-        script.src = buildUrl + "/39d0f3888b1f7c7b94f8d6b487a416d7.loader.js";
+        script.src = buildUrl + "/58f90468db4e6f82049f34d938f5ad60.loader.js";
         script.onload = function () {
           createUnityInstance(canvas, config, function (progress) {
-            loadingFill.style.width = (100 * progress) + "%";
+            splashFill.style.width = (100 * loadShare * progress) + "%";
           }).then(function () {
-            loading.hidden = true;
             canvas.focus();
+            setTimeout(hideSplash, splashFallbackMilliseconds);
           }).catch(showError);
         };
         script.onerror = function () {
