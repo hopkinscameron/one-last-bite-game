@@ -37,6 +37,19 @@ body {
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
 }
 
+#top-band {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top, 0px);
+  touch-action: none;
+}
+
+#top-band[hidden] {
+  display: none;
+}
+
 #unity-canvas {
   display: block;
   width: 100%;
