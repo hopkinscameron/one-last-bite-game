@@ -24,7 +24,6 @@
       <div id="safe-area-probe" aria-hidden="true"></div>
     </div>
     <div id="top-band" aria-hidden="true" hidden></div>
-    <script src="TemplateData/touch-probe.js"></script>
     <div id="splash">
       <div class="splash-gap"></div>
       <div id="splash-icon"><div class="splash-icon-art">
@@ -103,7 +102,7 @@
         <img id="splash-emblem" alt="" hidden>
         <span class="splash-dim">Welcome back, <span id="splash-rank"></span></span>
       </div>
-      <p id="splash-version" class="splash-dim splash-small">v0.3.0 b32</p>
+      <p id="splash-version" class="splash-dim splash-small">v0.3.0 b33</p>
     </div>
     <div id="rotate" hidden>
       <svg id="rotate-phone" viewBox="0 0 100 100" aria-hidden="true">
@@ -265,31 +264,24 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/37e7a4e01f62bda18ff1854ad6bb6cfa.data",
-          frameworkUrl: buildUrl + "/2cb2dcadb3f0feef86e09d4302efd5db.framework.js",
-          codeUrl: buildUrl + "/e6a8966a8bdb00cd5d40662e7b624217.wasm",
+          dataUrl: buildUrl + "/7ffc1c467db40242ff7cc9e5bd50a0b2.data",
+          frameworkUrl: buildUrl + "/553980e885eb79cf55e270394fb01acb.framework.js",
+          codeUrl: buildUrl + "/90c57f4dce9ebab5dd1beefab4494107.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "The Dragon's Lair Gaming Studio",
           productName: "One Last Bite",
           productVersion: "0.3.0",
-          devicePixelRatio: Math.min(window.devicePixelRatio || 1, 3),
+          devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
           showBanner: showBanner,
           errorHandler: showRuntimeError
         };
 
         var script = document.createElement("script");
-        script.src = buildUrl + "/50e284da32d5c8f7d6df53efeab8434b.loader.js";
+        script.src = buildUrl + "/2befe97fb48fc3619c95af286a14a69d.loader.js";
         script.onload = function () {
           createUnityInstance(canvas, config, function (progress) {
             splashFill.style.width = (100 * loadShare * progress) + "%";
-          }).then(function (unityInstance) {
-            window.oneLastBitePixelRatio = function (ratio) {
-              if (ratio) {
-                unityInstance.Module.devicePixelRatio = ratio;
-              }
-
-              return unityInstance.Module.devicePixelRatio;
-            };
+          }).then(function () {
             canvas.focus();
             setTimeout(hideSplash, splashFallbackMilliseconds);
           }).catch(showError);
