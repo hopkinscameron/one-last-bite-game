@@ -73,8 +73,8 @@
         },
         {
           "metric": "deepestRoom",
-          "target": 6,
-          "goal": "Reach room 6"
+          "target": 7,
+          "goal": "Reach room 7"
         },
         {
           "metric": "deepestRoom",
@@ -101,13 +101,13 @@
         },
         {
           "metric": "longestChain",
-          "target": 5,
-          "goal": "Hit a ×5 chain"
+          "target": 8,
+          "goal": "Hold ×5 for 3 bites"
         },
         {
           "metric": "longestChain",
-          "target": 10,
-          "goal": "Hold ×5 for 5 bites"
+          "target": 12,
+          "goal": "Hold ×5 for 7 bites"
         },
         {
           "metric": "longestChain",
@@ -321,8 +321,8 @@
       "tiers": [
         {
           "metric": "cleanDepth",
-          "target": 4,
-          "goal": "Reach room 4 with no power-ups"
+          "target": 3,
+          "goal": "Reach room 3 with no power-ups"
         },
         {
           "metric": "cleanDepth",

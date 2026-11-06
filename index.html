@@ -23,6 +23,7 @@
       <canvas id="unity-canvas" tabindex="-1"></canvas>
       <div id="safe-area-probe" aria-hidden="true"></div>
     </div>
+    <script src="TemplateData/touch-probe.js"></script>
     <div id="splash">
       <div class="splash-gap"></div>
       <div id="splash-icon"><div class="splash-icon-art">
@@ -101,7 +102,7 @@
         <img id="splash-emblem" alt="" hidden>
         <span class="splash-dim">Welcome back, <span id="splash-rank"></span></span>
       </div>
-      <p id="splash-version" class="splash-dim splash-small">v0.3.0 b26</p>
+      <p id="splash-version" class="splash-dim splash-small">v0.3.0 b27</p>
     </div>
     <div id="rotate" hidden>
       <svg id="rotate-phone" viewBox="0 0 100 100" aria-hidden="true">
@@ -245,9 +246,9 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/b238798a08cfa61aab3b3160fb781ad5.data",
-          frameworkUrl: buildUrl + "/edfd94f54a45da06decf51f287bccc3d.framework.js",
-          codeUrl: buildUrl + "/6c9992697588bd449ec3ba88814f2407.wasm",
+          dataUrl: buildUrl + "/f136db38b1efe9c573823d6eea462829.data",
+          frameworkUrl: buildUrl + "/664ae3c9f12923d80567563743baf088.framework.js",
+          codeUrl: buildUrl + "/917c8be32549567d62e4893b481f3ce3.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "The Dragon's Lair Gaming Studio",
           productName: "One Last Bite",
@@ -258,7 +259,7 @@
         };
 
         var script = document.createElement("script");
-        script.src = buildUrl + "/5440249048fcebcefc2c0a0c4da6d7e8.loader.js";
+        script.src = buildUrl + "/b860b3267d57f57b3cae3c047602a8bd.loader.js";
         script.onload = function () {
           createUnityInstance(canvas, config, function (progress) {
             splashFill.style.width = (100 * loadShare * progress) + "%";

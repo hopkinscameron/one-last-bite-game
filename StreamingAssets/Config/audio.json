@@ -114,6 +114,7 @@
     "volume": 0.5,
     "crossfadeSeconds": 2,
     "pauseVolume": 0.4,
+    "prepareRoomsAhead": 1,
     "tempo": {
       "fromRoom": 2,
       "perRoom": 0.02,
