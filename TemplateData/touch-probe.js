@@ -6,6 +6,7 @@
   var safeArea = document.getElementById("safe-area-probe");
   var active = false;
   var toggle = null;
+  var ratioToggle = null;
   var overlay = null;
   var readout = null;
   var browserDot = null;
@@ -74,13 +75,14 @@
 
   function describe() {
     var rect = canvas.getBoundingClientRect();
+    var rawTop = Element.prototype.getBoundingClientRect.call(canvas).top;
     var lines = [
       "touch probe (tap Probe to close)",
       "fps       " + (fpsHistory.length ? fpsHistory[fpsHistory.length - 1] : 0) + "  lowest " + fpsHistorySeconds + "s " + lowestFps(),
       "screen    " + screen.width + " x " + screen.height + "  dpr " + window.devicePixelRatio,
       "inner     " + window.innerWidth + " x " + window.innerHeight + "  client " + document.documentElement.clientWidth + " x " + document.documentElement.clientHeight,
       viewportLine(),
-      "canvas    top " + round(rect.top) + " left " + round(rect.left) + "  css " + round(rect.width) + " x " + round(rect.height) + "  backing " + canvas.width + " x " + canvas.height,
+      "canvas    top " + round(rect.top) + " (raw " + round(rawTop) + ") left " + round(rect.left) + "  css " + round(rect.width) + " x " + round(rect.height) + "  backing " + canvas.width + " x " + canvas.height,
       "game      " + (gameScreen ? gameScreen.width + " x " + gameScreen.height : "waiting for a press"),
       "safe      T/B/L/R " + safeInsets(),
       "page      scrollY " + round(window.scrollY) + "  standalone " + (navigator.standalone === true),
@@ -134,6 +136,7 @@
     }
 
     overlay.style.display = on ? "block" : "none";
+    ratioToggle.style.display = on ? "block" : "none";
     clearInterval(refreshTimer);
     if (on) {
       frames = 0;
@@ -149,18 +152,42 @@
     event.stopPropagation();
   }
 
-  function addToggle() {
-    toggle = element("button", "position:fixed;z-index:60;top:calc(env(safe-area-inset-top, 0px) + 6px);left:calc(env(safe-area-inset-left, 0px) + 6px);padding:6px 10px;border:1px solid rgba(255,255,255,0.5);border-radius:6px;background:rgba(0,0,0,0.6);color:#fff;font:600 12px/1 system-ui,sans-serif;touch-action:manipulation;-webkit-tap-highlight-color:transparent;");
-    toggle.type = "button";
-    toggle.textContent = "Probe";
+  function button(label, left, onTap) {
+    var node = element("button", "position:fixed;z-index:60;top:calc(env(safe-area-inset-top, 0px) + 6px);left:calc(env(safe-area-inset-left, 0px) + " + left + "px);padding:6px 10px;border:1px solid rgba(255,255,255,0.5);border-radius:6px;background:rgba(0,0,0,0.6);color:#fff;font:600 12px/1 system-ui,sans-serif;touch-action:manipulation;-webkit-tap-highlight-color:transparent;");
+    node.type = "button";
+    node.textContent = label;
     ["pointerdown", "pointerup", "touchstart", "touchend", "mousedown", "mouseup"].forEach(function (type) {
-      toggle.addEventListener(type, keepFromGame);
+      node.addEventListener(type, keepFromGame);
     });
-    toggle.addEventListener("click", function (event) {
+    node.addEventListener("click", function (event) {
       event.stopPropagation();
-      setActive(!active);
+      onTap();
     });
-    document.body.appendChild(toggle);
+    document.body.appendChild(node);
+    return node;
+  }
+
+  function pixelRatio(ratio) {
+    return typeof window.oneLastBitePixelRatio === "function" ? window.oneLastBitePixelRatio(ratio) : 0;
+  }
+
+  function showRatio() {
+    ratioToggle.textContent = "Pixels " + (pixelRatio() || "?") + "x";
+  }
+
+  function switchRatio() {
+    pixelRatio(pixelRatio() >= 3 ? 2 : 3);
+    fpsHistory = [];
+    showRatio();
+  }
+
+  function addToggles() {
+    toggle = button("Probe", 6, function () {
+      setActive(!active);
+      showRatio();
+    });
+    ratioToggle = button("Pixels ?x", 72, switchRatio);
+    ratioToggle.style.display = "none";
   }
 
   function onPointerDown(event) {
@@ -183,7 +210,7 @@
     gamePoint = { x: rect.left + x / width * rect.width, y: rect.top + (1 - y / height) * rect.height };
   };
 
-  addToggle();
+  addToggles();
   window.addEventListener("pointerdown", onPointerDown, { capture: true, passive: true });
   window.addEventListener("pointermove", onPointerMove, { capture: true, passive: true });
 })();
