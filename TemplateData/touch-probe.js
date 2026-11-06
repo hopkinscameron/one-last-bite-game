@@ -1,14 +1,11 @@
 (function () {
-  var cornerSize = 64;
-  var cornerTapsToToggle = 5;
-  var cornerWindowMilliseconds = 2500;
   var refreshMilliseconds = 250;
   var fpsHistorySeconds = 10;
 
   var canvas = document.getElementById("unity-canvas");
   var safeArea = document.getElementById("safe-area-probe");
   var active = false;
-  var cornerTaps = [];
+  var toggle = null;
   var overlay = null;
   var readout = null;
   var browserDot = null;
@@ -78,7 +75,7 @@
   function describe() {
     var rect = canvas.getBoundingClientRect();
     var lines = [
-      "touch probe (tap top-left corner 5x to close)",
+      "touch probe (tap Probe to close)",
       "fps       " + (fpsHistory.length ? fpsHistory[fpsHistory.length - 1] : 0) + "  lowest " + fpsHistorySeconds + "s " + lowestFps(),
       "screen    " + screen.width + " x " + screen.height + "  dpr " + window.devicePixelRatio,
       "inner     " + window.innerWidth + " x " + window.innerHeight + "  client " + document.documentElement.clientWidth + " x " + document.documentElement.clientHeight,
@@ -148,23 +145,25 @@
     }
   }
 
-  function countCornerTap(x, y) {
-    if (x > cornerSize || y > cornerSize) {
-      cornerTaps = [];
-      return;
-    }
+  function keepFromGame(event) {
+    event.stopPropagation();
+  }
 
-    var now = Date.now();
-    cornerTaps = cornerTaps.filter(function (time) { return now - time < cornerWindowMilliseconds; });
-    cornerTaps.push(now);
-    if (cornerTaps.length >= cornerTapsToToggle) {
-      cornerTaps = [];
+  function addToggle() {
+    toggle = element("button", "position:fixed;z-index:60;top:calc(env(safe-area-inset-top, 0px) + 6px);left:calc(env(safe-area-inset-left, 0px) + 6px);padding:6px 10px;border:1px solid rgba(255,255,255,0.5);border-radius:6px;background:rgba(0,0,0,0.6);color:#fff;font:600 12px/1 system-ui,sans-serif;touch-action:manipulation;-webkit-tap-highlight-color:transparent;");
+    toggle.type = "button";
+    toggle.textContent = "Probe";
+    ["pointerdown", "pointerup", "touchstart", "touchend", "mousedown", "mouseup"].forEach(function (type) {
+      toggle.addEventListener(type, keepFromGame);
+    });
+    toggle.addEventListener("click", function (event) {
+      event.stopPropagation();
       setActive(!active);
-    }
+    });
+    document.body.appendChild(toggle);
   }
 
   function onPointerDown(event) {
-    countCornerTap(event.clientX, event.clientY);
     browserPoint = { x: event.clientX, y: event.clientY };
   }
 
@@ -184,6 +183,7 @@
     gamePoint = { x: rect.left + x / width * rect.width, y: rect.top + (1 - y / height) * rect.height };
   };
 
+  addToggle();
   window.addEventListener("pointerdown", onPointerDown, { capture: true, passive: true });
   window.addEventListener("pointermove", onPointerMove, { capture: true, passive: true });
 })();
