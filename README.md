@@ -22,7 +22,7 @@ Good to know:
 - **Always play from the home-screen icon.** Safari and the icon keep separate saves. Scores, unlocks and your leaderboard name made in one don't show in the other.
 - **Leaderboard name:** the game asks for one the first time you open the Leaderboard or post a score. Change it any time in **Settings › Leaderboard name**.
 - **Scores post on their own** when a run beats your best. With no signal, the game says "Couldn't post, will retry" and sends it later.
-- **No sound?** On iPhone, the silent switch mutes the game, music included.
+- **No sound?** On iPhone, silent mode mutes the game, music included (unlike videos, which play anyway). Turn it off with the switch on the side, the Action button or Control Center.
 - **Getting updates:** swipe the app closed and open it again. The small version number in the bottom-right corner shows which build you have.
 - **Daily run:** everyone gets the same first room each day. It changes at midnight Pacific time.
 
