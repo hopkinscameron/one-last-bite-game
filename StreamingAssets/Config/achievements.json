@@ -139,8 +139,8 @@
         },
         {
           "metric": "biggestBank",
-          "target": 4000,
-          "goal": "Bank 4,000 in one room"
+          "target": 3000,
+          "goal": "Bank 3,000 in one room"
         }
       ]
     },
