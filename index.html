@@ -102,7 +102,7 @@
         <img id="splash-emblem" alt="" hidden>
         <span class="splash-dim">Welcome back, <span id="splash-rank"></span></span>
       </div>
-      <p id="splash-version" class="splash-dim splash-small">v0.4.0 b44</p>
+      <p id="splash-version" class="splash-dim splash-small">v0.4.0 b45</p>
     </div>
     <div id="rotate" hidden>
       <svg id="rotate-phone" viewBox="0 0 100 100" aria-hidden="true">
@@ -264,9 +264,9 @@
         var buildUrl = "Build";
         var config = {
           arguments: [],
-          dataUrl: buildUrl + "/e17148547ccdbe10794602e58f38a1cf.data",
+          dataUrl: buildUrl + "/bcb5b6c3856b9a023209265eb1b28725.data",
           frameworkUrl: buildUrl + "/5c765d4afbb4cabc9f131b0b30afebde.framework.js",
-          codeUrl: buildUrl + "/5fb859f89e3c4ebb95917c22ffd292c7.wasm",
+          codeUrl: buildUrl + "/e84902485e7c61f1628a8d14d7623a63.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "The Dragon's Lair Gaming Studio",
           productName: "One Last Bite",
@@ -277,7 +277,7 @@
         };
 
         var script = document.createElement("script");
-        script.src = buildUrl + "/bd6c3f6027c04fdecd0c227fd9599a75.loader.js";
+        script.src = buildUrl + "/86418f222a81fe14fd73bb6f8fc7d8ee.loader.js";
         script.onload = function () {
           createUnityInstance(canvas, config, function (progress) {
             splashFill.style.width = (100 * loadShare * progress) + "%";
