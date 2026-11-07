@@ -6,13 +6,25 @@ Playable WebGL build of **One Last Bite**, an endless room-based snake game for 
 
 This repo holds **build output only** (`index.html`, `Build/`, `TemplateData/`, `manifest.webmanifest`, icons). The Unity source and design docs live in the `one-last-bite` repo. Never edit files here by hand: change the source, rebuild and redeploy.
 
-## Play on iPhone
+## Play on your phone (for friends)
 
-1. Open the URL above in Safari.
-2. Tap Share › **Add to Home Screen**.
-3. Launch from the icon. The game runs full-screen with no browser UI.
+**iPhone (Safari):**
 
-The build version (e.g. `v0.1.0 b2`) appears faintly in the bottom-right corner. Use it to confirm the phone is running the latest deploy.
+1. Open **https://hopkinscameron.github.io/one-last-bite-game/** in **Safari**.
+2. Tap **Share**. On iOS 26, tap the **•••** button next to the address first, then **Share**.
+3. Scroll down and tap **Add to Home Screen**. Leave **Open as Web App** on, then tap **Add**.
+4. Play from the new **One Last Bite** icon. It runs full-screen, like an app.
+
+**Android (Chrome):** open the link, tap the **⋮** menu, then **Add to Home screen** (or **Install app**).
+
+Good to know:
+
+- **Always play from the home-screen icon.** Safari and the icon keep separate saves. Scores, unlocks and your leaderboard name made in one don't show in the other.
+- **Leaderboard name:** the game asks for one the first time you open the Leaderboard or post a score. Change it any time in **Settings › Leaderboard name**.
+- **Scores post on their own** when a run beats your best. With no signal, the game says "Couldn't post, will retry" and sends it later.
+- **No sound?** On iPhone, the silent switch mutes the game, music included.
+- **Getting updates:** swipe the app closed and open it again. The small version number in the bottom-right corner shows which build you have.
+- **Daily run:** everyone gets the same first room each day. It changes at midnight Pacific time.
 
 ## GitHub Pages setup (one time)
 
