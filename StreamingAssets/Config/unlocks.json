@@ -70,6 +70,19 @@
       }
     },
     {
+      "id": "Sandstone",
+      "name": "Sandstone",
+      "kind": "Palette",
+      "source": {
+        "type": "Tutorial"
+      },
+      "palette": {
+        "head": "#F1D6B0",
+        "body": "#D9B07E",
+        "pattern": "Solid"
+      }
+    },
+    {
       "id": "Abyss",
       "name": "Abyss",
       "kind": "Palette",
