@@ -522,6 +522,62 @@
           "goal": "Open 250 Mysteries"
         }
       ]
+    },
+    {
+      "id": "DailyRegular",
+      "name": "Daily Regular",
+      "powerUp": "",
+      "progress": "{0} / {1} days",
+      "tiers": [
+        {
+          "metric": "dailyDaysPlayed",
+          "target": 3,
+          "goal": "Play the Daily on 3 days"
+        },
+        {
+          "metric": "dailyDaysPlayed",
+          "target": 10,
+          "goal": "Play the Daily on 10 days"
+        },
+        {
+          "metric": "dailyDaysPlayed",
+          "target": 30,
+          "goal": "Play the Daily on 30 days"
+        },
+        {
+          "metric": "dailyDaysPlayed",
+          "target": 100,
+          "goal": "Play the Daily on 100 days"
+        }
+      ]
+    },
+    {
+      "id": "Collector",
+      "name": "Collector",
+      "powerUp": "",
+      "progress": "{0} / {1}",
+      "tiers": [
+        {
+          "metric": "cosmeticsUnlocked",
+          "target": 5,
+          "goal": "Unlock 5 cosmetics"
+        },
+        {
+          "metric": "cosmeticsUnlocked",
+          "target": 12,
+          "goal": "Unlock 12 cosmetics"
+        },
+        {
+          "metric": "cosmeticsUnlocked",
+          "target": 20,
+          "goal": "Unlock 20 cosmetics"
+        },
+        {
+          "metric": "cosmeticsUnlocked",
+          "target": 66,
+          "goal": "Unlock every cosmetic"
+        }
+      ]
     }
   ]
 }
