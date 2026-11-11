@@ -563,6 +563,21 @@
       "prestige": true
     },
     {
+      "id": "Banded",
+      "name": "Banded",
+      "kind": "Palette",
+      "source": {
+        "type": "Tier",
+        "tier": "DailyRegular.Standard"
+      },
+      "palette": {
+        "head": "#EEF0F3",
+        "body": "#C9CCD3",
+        "pattern": "Alternate",
+        "accent": "#4A4F5C"
+      }
+    },
+    {
       "id": "NoTrail",
       "name": "None",
       "kind": "Trail",
@@ -830,6 +845,38 @@
       }
     },
     {
+      "id": "Sparkle",
+      "name": "Sparkle",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "DailyRegular.Beginner"
+      },
+      "trail": {
+        "style": "Sparks",
+        "length": 7,
+        "size": 0.26,
+        "alpha": 0.7,
+        "color": "#FFF6D6"
+      }
+    },
+    {
+      "id": "Ripple",
+      "name": "Ripple",
+      "kind": "Trail",
+      "source": {
+        "type": "Tier",
+        "tier": "DailyRegular.Hard"
+      },
+      "trail": {
+        "style": "Ripple",
+        "length": 4,
+        "size": 0.5,
+        "alpha": 0.45,
+        "color": "#FFFFFF"
+      }
+    },
+    {
       "id": "Square",
       "name": "Square",
       "kind": "Head",
@@ -927,6 +974,27 @@
         "rank": "Ouroboros"
       },
       "shape": "Halo"
+    },
+    {
+      "id": "Horned",
+      "name": "Horned",
+      "kind": "Head",
+      "source": {
+        "type": "Tier",
+        "tier": "Collector.Standard"
+      },
+      "shape": "Horned"
+    },
+    {
+      "id": "Crown",
+      "name": "Crown",
+      "kind": "Head",
+      "source": {
+        "type": "Tier",
+        "tier": "DailyRegular.Veteran"
+      },
+      "shape": "Crown",
+      "prestige": true
     }
   ]
 }
