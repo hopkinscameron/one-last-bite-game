@@ -1,4 +1,9 @@
 {
+  "tutorial": {
+    "id": "LearnedTheRopes",
+    "name": "Learned the Ropes",
+    "points": 1
+  },
   "tiers": [
     {
       "name": "Beginner",

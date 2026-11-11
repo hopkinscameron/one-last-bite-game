@@ -1,0 +1,366 @@
+{
+  "layouts": [
+    {
+      "name": "Open Field",
+      "rows": [
+        "#######D#######",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#.............#",
+        "#######E#######"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "name": "Move",
+      "layout": "Open Field",
+      "doorThreshold": 3,
+      "caveIn": false,
+      "start": {
+        "snake": [
+          {"x": 7, "y": 5},
+          {"x": 7, "y": 4},
+          {"x": 7, "y": 3}
+        ],
+        "direction": "up",
+        "pot": 0
+      },
+      "fruit": [
+        {"x": 7, "y": 10, "fruit": "Ember"},
+        {"x": 11, "y": 10, "fruit": "Sun"},
+        {"x": 11, "y": 16, "fruit": "Sky"}
+      ],
+      "pickups": [],
+      "returnOnColorChange": false,
+      "goal": {"kind": "eat", "count": 3},
+      "successDelaySeconds": 1.4,
+      "moments": [
+        {
+          "id": "start",
+          "on": "start",
+          "coach": "Swipe anywhere to turn. Eat 3 fruit.",
+          "dock": "top",
+          "frozen": true,
+          "hint": {
+            "kind": "swipe",
+            "from": {"x": 10.5, "y": 4.4},
+            "to": {"x": 10.5, "y": 8.4}
+          }
+        },
+        {"id": "play", "on": "firstEat", "coach": "Swipe anywhere to turn. Eat 3 fruit.", "dock": "top"},
+        {"id": "tryagain", "tryAgain": true, "coach": "Turn before you reach a wall.", "dock": "top", "frozen": true},
+        {"id": "success", "on": "goal", "success": true}
+      ]
+    },
+    {
+      "n": 2,
+      "name": "The door",
+      "layout": "Open Field",
+      "doorThreshold": 3,
+      "caveIn": false,
+      "start": {
+        "snake": [
+          {"x": 7, "y": 3},
+          {"x": 7, "y": 2},
+          {"x": 7, "y": 1}
+        ],
+        "direction": "up",
+        "pot": 0
+      },
+      "fruit": [
+        {"x": 4, "y": 7, "fruit": "Leaf"},
+        {"x": 10, "y": 11, "fruit": "Plum"},
+        {"x": 5, "y": 15, "fruit": "Sun"}
+      ],
+      "pickups": [],
+      "returnOnColorChange": false,
+      "goal": {"kind": "leave"},
+      "successDelaySeconds": 1.4,
+      "moments": [
+        {
+          "id": "start",
+          "on": "start",
+          "coach": "Each fruit fills a pip. Fill them to open the door.",
+          "cue": "swipe",
+          "dock": "bottom",
+          "frozen": true,
+          "spotlight": {
+            "kind": "tiles",
+            "mode": "paused",
+            "from": {"x": 8, "y": 22},
+            "to": {"x": 10, "y": 22}
+          }
+        },
+        {
+          "id": "door",
+          "on": "doorOpened",
+          "coach": "The door’s open. Go through it.",
+          "cue": "tap",
+          "dock": "bottom",
+          "spotlight": {
+            "kind": "tiles",
+            "mode": "paused",
+            "from": {"x": 7, "y": 22},
+            "to": {"x": 7, "y": 22},
+            "round": true
+          }
+        },
+        {"id": "tryagain", "tryAgain": true, "coach": "Fill the pips, then go through the door.", "cue": "swipe", "dock": "bottom", "frozen": true},
+        {"id": "success", "on": "goal", "success": true}
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Banking",
+      "layout": "Open Field",
+      "doorThreshold": 3,
+      "caveIn": false,
+      "start": {
+        "snake": [
+          {"x": 7, "y": 3},
+          {"x": 7, "y": 2},
+          {"x": 7, "y": 1}
+        ],
+        "direction": "up",
+        "pot": 0
+      },
+      "fruit": [
+        {"x": 9, "y": 7, "fruit": "Ember"},
+        {"x": 4, "y": 11, "fruit": "Sun"},
+        {"x": 9, "y": 15, "fruit": "Sky"}
+      ],
+      "pickups": [],
+      "returnOnColorChange": false,
+      "goal": {"kind": "leave"},
+      "successDelaySeconds": 1.4,
+      "moments": [
+        {
+          "id": "start",
+          "on": "start",
+          "coach": "Fruit adds to your pot.",
+          "cue": "swipe",
+          "dock": "bottom",
+          "frozen": true,
+          "spotlight": {"kind": "hud", "mode": "paused", "item": "pot"}
+        },
+        {
+          "id": "door",
+          "on": "doorOpened",
+          "coach": "Leave through the door to bank it.",
+          "cue": "tap",
+          "dock": "bottom",
+          "spotlight": {
+            "kind": "tiles",
+            "mode": "paused",
+            "from": {"x": 7, "y": 22},
+            "to": {"x": 7, "y": 22},
+            "round": true
+          }
+        },
+        {
+          "id": "banked",
+          "on": "exited",
+          "coach": "Banked points are safe. That’s your score.",
+          "cue": "tap",
+          "dock": "bottom",
+          "spotlight": {"kind": "hud", "mode": "paused", "item": "banked"}
+        },
+        {
+          "id": "lost",
+          "on": "afterTap",
+          "coach": "Crash before the door and your pot is lost.",
+          "cue": "tap",
+          "dock": "bottom",
+          "spotlight": {"kind": "hud", "mode": "paused", "item": "pot"}
+        },
+        {"id": "tryagain", "tryAgain": true, "coach": "Leave through the door to bank your pot.", "cue": "swipe", "dock": "bottom", "frozen": true},
+        {"id": "success", "on": "afterTap", "success": true}
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Chains",
+      "layout": "Open Field",
+      "doorThreshold": 6,
+      "caveIn": false,
+      "start": {
+        "snake": [
+          {"x": 7, "y": 3},
+          {"x": 7, "y": 2},
+          {"x": 7, "y": 1}
+        ],
+        "direction": "up",
+        "pot": 0
+      },
+      "fruit": [
+        {"x": 7, "y": 8, "fruit": "Sky"},
+        {"x": 7, "y": 10, "fruit": "Ember"},
+        {"x": 11, "y": 15, "fruit": "Sky"},
+        {"x": 4, "y": 16, "fruit": "Sky"},
+        {"x": 11, "y": 7, "fruit": "Ember"},
+        {"x": 4, "y": 11, "fruit": "Ember"}
+      ],
+      "pickups": [],
+      "returnOnColorChange": true,
+      "failOnChainReset": true,
+      "goal": {"kind": "chainReaches", "count": 3},
+      "successDelaySeconds": 1.4,
+      "moments": [
+        {
+          "id": "start",
+          "on": "start",
+          "coach": "Eat the same color in a row to build a chain. Reach ×3.",
+          "cue": "swipe",
+          "dock": "bottom",
+          "frozen": true,
+          "spotlight": {"kind": "hud", "mode": "paused", "item": "chain"}
+        },
+        {
+          "id": "wrong",
+          "on": "chainReset",
+          "coach": "Different color: chain reset. Stick to one color.",
+          "dock": "bottom",
+          "spotlight": {"kind": "hud", "mode": "live", "item": "chain"}
+        },
+        {"id": "tryagain", "tryAgain": true, "coach": "Eat the same color in a row.", "cue": "swipe", "dock": "bottom", "frozen": true},
+        {"id": "success", "on": "goal", "success": true}
+      ]
+    },
+    {
+      "n": 5,
+      "name": "The cave-in",
+      "layout": "Open Field",
+      "doorThreshold": 2,
+      "caveIn": true,
+      "collapseSeconds": 8,
+      "start": {
+        "snake": [
+          {"x": 7, "y": 3},
+          {"x": 7, "y": 2},
+          {"x": 7, "y": 1}
+        ],
+        "direction": "up",
+        "pot": 0
+      },
+      "fruit": [
+        {"x": 5, "y": 7, "fruit": "Sun"},
+        {"x": 9, "y": 11, "fruit": "Leaf"}
+      ],
+      "pickups": [],
+      "returnOnColorChange": false,
+      "exitWaitsForCollapse": true,
+      "goal": {"kind": "leave"},
+      "successDelaySeconds": 1.4,
+      "moments": [
+        {"id": "start", "on": "start", "coach": "This room caves in. Eat 2 fruit to open the door.", "cue": "swipe", "dock": "bottom", "frozen": true},
+        {
+          "id": "clock",
+          "on": "collapseTimerStarted",
+          "coach": "Once the door opens, the clock starts. The exit stays shut until the walls begin to close.",
+          "dock": "bottom",
+          "spotlight": {"kind": "hud", "mode": "live", "item": "status"}
+        },
+        {
+          "id": "closing",
+          "on": "ringCollapsed",
+          "coach": "The walls are closing. Get out!",
+          "dock": "bottom",
+          "spotlight": {"kind": "band", "mode": "live"}
+        },
+        {"id": "tryagain", "tryAgain": true, "coach": "Head for the door before the walls reach you.", "cue": "swipe", "dock": "bottom", "frozen": true},
+        {"id": "success", "on": "goal", "success": true}
+      ]
+    },
+    {
+      "n": 6,
+      "name": "Power-ups",
+      "layout": "Open Field",
+      "doorThreshold": 3,
+      "caveIn": false,
+      "start": {
+        "snake": [
+          {"x": 7, "y": 7},
+          {"x": 7, "y": 6},
+          {"x": 7, "y": 5},
+          {"x": 7, "y": 4},
+          {"x": 7, "y": 3},
+          {"x": 8, "y": 3},
+          {"x": 9, "y": 3},
+          {"x": 10, "y": 3},
+          {"x": 11, "y": 3}
+        ],
+        "direction": "up",
+        "pot": 30,
+        "chainFruit": "Sky",
+        "chainLength": 2
+      },
+      "fruit": [
+        {"x": 7, "y": 15, "fruit": "Ember"}
+      ],
+      "pickups": [
+        {"x": 7, "y": 11, "powerUp": "Wild", "afterEats": 0},
+        {"x": 10, "y": 15, "powerUp": "Shed", "afterEats": 1}
+      ],
+      "returnOnColorChange": false,
+      "goal": {"kind": "usePowerUp", "powerUp": "Shed"},
+      "successDelaySeconds": 1.4,
+      "moments": [
+        {
+          "id": "start",
+          "on": "start",
+          "coach": "Power-ups help. Wild keeps your chain going with any color.",
+          "cue": "swipe",
+          "dock": "top",
+          "frozen": true,
+          "spotlight": {
+            "kind": "tiles",
+            "mode": "paused",
+            "from": {"x": 7, "y": 11},
+            "to": {"x": 7, "y": 11},
+            "round": true
+          }
+        },
+        {
+          "id": "slot",
+          "on": "slotFilled",
+          "coach": "Shed goes in your slot. Double-tap anywhere to use it.",
+          "dock": "bottom",
+          "spotlight": {"kind": "hud", "mode": "live", "item": "slot"},
+          "hint": {
+            "kind": "doubletap",
+            "at": {"x": 4, "y": 8}
+          }
+        },
+        {
+          "id": "used",
+          "on": "powerUpUsed",
+          "coach": "Shed cuts your tail. Your chain stays.",
+          "dock": "bottom",
+          "spotlight": {"kind": "hud", "mode": "live", "item": "chain"}
+        },
+        {"id": "tryagain", "tryAgain": true, "coach": "Grab the power-up, then double-tap.", "cue": "swipe", "dock": "top", "frozen": true},
+        {"id": "success", "on": "goal", "success": true}
+      ]
+    }
+  ]
+}
