@@ -64,8 +64,8 @@
         "type": "Start"
       },
       "palette": {
-        "head": "#F5F5F5",
-        "body": "#C7CCD6",
+        "head": "#FFFFFF",
+        "body": "#C3CAD6",
         "pattern": "Solid"
       }
     },
@@ -77,9 +77,10 @@
         "type": "Tutorial"
       },
       "palette": {
-        "head": "#F1D6B0",
-        "body": "#D9B07E",
-        "pattern": "Solid"
+        "head": "#FFE9C9",
+        "body": "#E0AE6E",
+        "pattern": "Stripe",
+        "accent": "#9C5A2E"
       }
     },
     {
@@ -91,8 +92,8 @@
         "tier": "DeepDiver.Standard"
       },
       "palette": {
-        "head": "#E6E3FF",
-        "body": "#8579D9",
+        "head": "#7DEBFF",
+        "body": "#168FA6",
         "pattern": "Fade"
       }
     },
@@ -105,10 +106,10 @@
         "tier": "ChainMaster.Standard"
       },
       "palette": {
-        "head": "#FFFFFF",
-        "body": "#B9BEC8",
+        "head": "#E6FFF8",
+        "body": "#2FC7A8",
         "pattern": "Alternate",
-        "accent": "#8E86C9"
+        "accent": "#DDFFF6"
       }
     },
     {
@@ -120,10 +121,10 @@
         "tier": "Banker.Standard"
       },
       "palette": {
-        "head": "#F4EFE3",
-        "body": "#D3C9B1",
+        "head": "#FFFFFF",
+        "body": "#F3E4C3",
         "pattern": "Stripe",
-        "accent": "#9E9583"
+        "accent": "#2D6CA6"
       }
     },
     {
@@ -135,8 +136,8 @@
         "tier": "HighRoller.Standard"
       },
       "palette": {
-        "head": "#E9DDFF",
-        "body": "#9A80D6",
+        "head": "#FFC7E8",
+        "body": "#B8167A",
         "pattern": "Solid"
       }
     },
@@ -149,8 +150,8 @@
         "tier": "EscapeArtist.Standard"
       },
       "palette": {
-        "head": "#ECECEC",
-        "body": "#A3A6AD",
+        "head": "#F3F0FA",
+        "body": "#ABA3C2",
         "pattern": "Fade"
       }
     },
@@ -163,10 +164,10 @@
         "tier": "LastBite.Standard"
       },
       "palette": {
-        "head": "#E0E0E0",
-        "body": "#BDBDBD",
+        "head": "#A3A6B4",
+        "body": "#484B5A",
         "pattern": "Stripe",
-        "accent": "#76767C"
+        "accent": "#FFA238"
       }
     },
     {
@@ -178,10 +179,9 @@
         "tier": "LongTail.Standard"
       },
       "palette": {
-        "head": "#FFFFFF",
-        "body": "#C9BCF2",
-        "pattern": "Alternate",
-        "accent": "#F2F2F7"
+        "head": "#FFE6F4",
+        "body": "#FF94CF",
+        "pattern": "Solid"
       }
     },
     {
@@ -193,9 +193,10 @@
         "tier": "Glutton.Standard"
       },
       "palette": {
-        "head": "#FFF9EC",
-        "body": "#EADFC8",
-        "pattern": "Solid"
+        "head": "#FFFFFF",
+        "body": "#F8EAD0",
+        "pattern": "Gradient",
+        "accent": "#C2834D"
       }
     },
     {
@@ -207,8 +208,8 @@
         "tier": "Explorer.Standard"
       },
       "palette": {
-        "head": "#DCE3EE",
-        "body": "#8D9AB0",
+        "head": "#DCE6FA",
+        "body": "#5A79AD",
         "pattern": "Solid"
       }
     },
@@ -221,8 +222,8 @@
         "tier": "Purist.Standard"
       },
       "palette": {
-        "head": "#FFFFFF",
-        "body": "#F0F2F5",
+        "head": "#B9E3FF",
+        "body": "#FBFDFF",
         "pattern": "Solid"
       }
     },
@@ -235,10 +236,10 @@
         "tier": "Demolition.Standard"
       },
       "palette": {
-        "head": "#D9D9D9",
-        "body": "#9C9C9C",
-        "pattern": "Stripe",
-        "accent": "#707070"
+        "head": "#E3E3E3",
+        "body": "#9C9FA6",
+        "pattern": "Spots",
+        "accent": "#565A66"
       }
     },
     {
@@ -250,10 +251,10 @@
         "tier": "Wildcard.Standard"
       },
       "palette": {
-        "head": "#FFFFFF",
-        "body": "#9D85E0",
-        "pattern": "Alternate",
-        "accent": "#EEEEEE"
+        "head": "#F2FFD1",
+        "body": "#A8E04C",
+        "pattern": "Diamond",
+        "accent": "#6C3CCB"
       }
     },
     {
@@ -265,9 +266,10 @@
         "tier": "BorrowedTime.Standard"
       },
       "palette": {
-        "head": "#EFE6FF",
-        "body": "#B3A2E6",
-        "pattern": "Fade"
+        "head": "#FFE0F4",
+        "body": "#D1A3FF",
+        "pattern": "Gradient",
+        "accent": "#4A3BA6"
       }
     },
     {
@@ -280,9 +282,9 @@
       },
       "palette": {
         "head": "#FFFFFF",
-        "body": "#D5DAE3",
-        "pattern": "Stripe",
-        "accent": "#A8AFBD"
+        "body": "#8EE8FF",
+        "pattern": "Gradient",
+        "accent": "#A783FF"
       }
     },
     {
@@ -294,8 +296,8 @@
         "tier": "Molting.Standard"
       },
       "palette": {
-        "head": "#F2E8D5",
-        "body": "#C8B99A",
+        "head": "#FFF3D1",
+        "body": "#DDBE6E",
         "pattern": "Fade"
       }
     },
@@ -309,9 +311,9 @@
       },
       "palette": {
         "head": "#FFFFFF",
-        "body": "#F2F2F2",
-        "pattern": "Stripe",
-        "accent": "#8A8A99"
+        "body": "#F6F7FA",
+        "pattern": "Spots",
+        "accent": "#484B5B"
       }
     },
     {
@@ -323,9 +325,11 @@
         "tier": "DeepDiver.Veteran"
       },
       "palette": {
-        "head": "#C9C2E6",
-        "body": "#6E6491",
-        "pattern": "Solid"
+        "head": "#CBB6FF",
+        "body": "#4C4468",
+        "pattern": "Solid",
+        "finish": "Shimmer",
+        "sheen": "#C9B3FF"
       },
       "prestige": true
     },
@@ -339,9 +343,12 @@
       },
       "palette": {
         "head": "#FFFFFF",
-        "body": "#E3E6EB",
+        "body": "#F3F0EA",
         "pattern": "Alternate",
-        "accent": "#C4C9D2"
+        "accent": "#D6BE8E",
+        "finish": "Shimmer",
+        "sheen": "#F5CF85",
+        "flow": true
       },
       "prestige": true
     },
@@ -354,10 +361,12 @@
         "tier": "Banker.Veteran"
       },
       "palette": {
-        "head": "#E8D9A8",
-        "body": "#A88A3A",
+        "head": "#FFF1C4",
+        "body": "#DCA43C",
         "pattern": "Alternate",
-        "accent": "#C9AE62"
+        "accent": "#7D5420",
+        "finish": "Shimmer",
+        "sheen": "#FFFFFF"
       },
       "prestige": true
     },
@@ -370,10 +379,13 @@
         "tier": "HighRoller.Veteran"
       },
       "palette": {
-        "head": "#F3EBFF",
-        "body": "#7D5FC9",
-        "pattern": "Stripe",
-        "accent": "#C9AE62"
+        "head": "#EADBFF",
+        "body": "#6B3FD8",
+        "pattern": "Diamond",
+        "accent": "#DCA43C",
+        "finish": "Shimmer",
+        "sheen": "#FFE7A8",
+        "flow": true
       },
       "prestige": true
     },
@@ -386,10 +398,11 @@
         "tier": "EscapeArtist.Veteran"
       },
       "palette": {
-        "head": "#FFFFFF",
-        "body": "#5F6170",
-        "pattern": "Stripe",
-        "accent": "#E0E0E0"
+        "head": "#8A8FA6",
+        "body": "#4A4E66",
+        "pattern": "Solid",
+        "accent": "#FFE0A3",
+        "finish": "Glow"
       },
       "prestige": true
     },
@@ -402,9 +415,13 @@
         "tier": "LastBite.Veteran"
       },
       "palette": {
-        "head": "#D6D6DE",
-        "body": "#6A6A78",
-        "pattern": "Solid"
+        "head": "#EDEDF2",
+        "body": "#474A5C",
+        "pattern": "Alternate",
+        "accent": "#F5F5F8",
+        "finish": "Shimmer",
+        "sheen": "#FFFFFF",
+        "flow": true
       },
       "prestige": true
     },
@@ -418,10 +435,11 @@
       },
       "palette": {
         "head": "#FFFFFF",
-        "body": "#EDE7F2",
+        "body": "#F6F0F9",
         "pattern": "Alternate",
-        "accent": "#DCD3E6",
-        "finish": "Iridescent"
+        "accent": "#D9CCEA",
+        "finish": "Iridescent",
+        "flow": true
       },
       "prestige": true
     },
@@ -434,10 +452,12 @@
         "tier": "Glutton.Veteran"
       },
       "palette": {
-        "head": "#F7F7F7",
-        "body": "#E3E3E3",
-        "pattern": "Stripe",
-        "accent": "#9A9AA6"
+        "head": "#FFFFFF",
+        "body": "#F7F7FA",
+        "pattern": "Diamond",
+        "accent": "#5B5480",
+        "finish": "Shimmer",
+        "sheen": "#B9A6FF"
       },
       "prestige": true
     },
@@ -450,9 +470,11 @@
         "tier": "Explorer.Veteran"
       },
       "palette": {
-        "head": "#EEF1FA",
-        "body": "#B8C2DB",
-        "pattern": "Fade"
+        "head": "#FFFFFF",
+        "body": "#EEF2FF",
+        "pattern": "Solid",
+        "accent": "#8EA2F0",
+        "finish": "Pulse"
       },
       "prestige": true
     },
@@ -465,9 +487,11 @@
         "tier": "Purist.Veteran"
       },
       "palette": {
-        "head": "#FFFFFF",
-        "body": "#DAD7F5",
-        "pattern": "Solid"
+        "head": "#B9B3FF",
+        "body": "#33307A",
+        "pattern": "Solid",
+        "accent": "#FFF6D6",
+        "finish": "Glitter"
       },
       "prestige": true
     },
@@ -480,9 +504,12 @@
         "tier": "Demolition.Veteran"
       },
       "palette": {
-        "head": "#CFCFD4",
-        "body": "#8E9099",
-        "pattern": "Solid"
+        "head": "#E2E0DA",
+        "body": "#8C8A86",
+        "pattern": "Stripe",
+        "accent": "#D2CFC7",
+        "finish": "Shimmer",
+        "sheen": "#FFFFFF"
       },
       "prestige": true
     },
@@ -495,9 +522,11 @@
         "tier": "Wildcard.Veteran"
       },
       "palette": {
-        "head": "#E2D2FF",
-        "body": "#8A63D2",
-        "pattern": "Solid"
+        "head": "#F0DDFF",
+        "body": "#9B4DF0",
+        "pattern": "Solid",
+        "accent": "#E3B5FF",
+        "finish": "Pulse"
       },
       "prestige": true
     },
@@ -510,9 +539,11 @@
         "tier": "BorrowedTime.Veteran"
       },
       "palette": {
-        "head": "#C2C8F0",
-        "body": "#5A5F9E",
-        "pattern": "Solid"
+        "head": "#9FB4FF",
+        "body": "#243A7C",
+        "pattern": "Solid",
+        "accent": "#6E7CFF",
+        "finish": "Glow"
       },
       "prestige": true
     },
@@ -526,8 +557,10 @@
       },
       "palette": {
         "head": "#FFFFFF",
-        "body": "#CFDCEB",
-        "pattern": "Solid"
+        "body": "#9FE6FF",
+        "pattern": "Solid",
+        "accent": "#FFFFFF",
+        "finish": "Glitter"
       },
       "prestige": true
     },
@@ -540,9 +573,11 @@
         "tier": "Molting.Veteran"
       },
       "palette": {
-        "head": "#F0F0F5",
-        "body": "#ABABB8",
-        "pattern": "Fade"
+        "head": "#FFFFFF",
+        "body": "#DDF7EE",
+        "pattern": "Fade",
+        "accent": "#8DFFD0",
+        "finish": "Glow"
       },
       "prestige": true
     },
@@ -556,9 +591,11 @@
       },
       "palette": {
         "head": "#FFFFFF",
-        "body": "#C0C3CC",
-        "pattern": "Alternate",
-        "accent": "#E8EAEE"
+        "body": "#E9EDF3",
+        "pattern": "Gradient",
+        "accent": "#5C6274",
+        "finish": "Shimmer",
+        "sheen": "#FFFFFF"
       },
       "prestige": true
     },
@@ -571,10 +608,10 @@
         "tier": "DailyRegular.Standard"
       },
       "palette": {
-        "head": "#EEF0F3",
-        "body": "#C9CCD3",
+        "head": "#FFFFFF",
+        "body": "#A6D8FF",
         "pattern": "Alternate",
-        "accent": "#4A4F5C"
+        "accent": "#34408A"
       }
     },
     {
@@ -597,11 +634,11 @@
         "tier": "DeepDiver.Hard"
       },
       "trail": {
-        "style": "Dots",
+        "style": "Bubbles",
         "length": 6,
         "size": 0.3,
-        "alpha": 0.5,
-        "color": "#D8D2FF"
+        "alpha": 0.75,
+        "color": "#9FEFFF"
       }
     },
     {
@@ -615,9 +652,9 @@
       "trail": {
         "style": "Ghost",
         "length": 3,
-        "size": 0.8,
-        "alpha": 0.35,
-        "color": "#FFFFFF"
+        "size": 0.85,
+        "alpha": 0.4,
+        "color": "#B9A8FF"
       }
     },
     {
@@ -629,11 +666,11 @@
         "tier": "Banker.Hard"
       },
       "trail": {
-        "style": "Ribbon",
+        "style": "Splat",
         "length": 6,
-        "size": 0.18,
-        "alpha": 0.5,
-        "color": "#8C80CC"
+        "size": 0.5,
+        "alpha": 0.7,
+        "color": "#5B47E0"
       }
     },
     {
@@ -647,9 +684,10 @@
       "trail": {
         "style": "Sparks",
         "length": 5,
-        "size": 0.22,
-        "alpha": 0.7,
-        "color": "#FFFFFF"
+        "size": 0.36,
+        "alpha": 0.9,
+        "color": "#FFFFFF",
+        "glow": true
       }
     },
     {
@@ -662,10 +700,10 @@
       },
       "trail": {
         "style": "Dots",
-        "length": 3,
-        "size": 0.22,
-        "alpha": 0.4,
-        "color": "#B0B0B0"
+        "length": 4,
+        "size": 0.24,
+        "alpha": 0.45,
+        "color": "#C9C0D8"
       }
     },
     {
@@ -677,11 +715,16 @@
         "tier": "LastBite.Hard"
       },
       "trail": {
-        "style": "Sparks",
-        "length": 4,
-        "size": 0.2,
-        "alpha": 0.55,
-        "color": "#D6C8A6"
+        "style": "Specks",
+        "length": 5,
+        "size": 0.09,
+        "alpha": 0.85,
+        "color": "#E6B676",
+        "colors": [
+          "#E6B676",
+          "#C98E52",
+          "#F3D9A8"
+        ]
       }
     },
     {
@@ -694,10 +737,18 @@
       },
       "trail": {
         "style": "Ribbon",
-        "length": 10,
-        "size": 0.14,
-        "alpha": 0.45,
-        "color": "#C9BCF2"
+        "length": 12,
+        "size": 0.2,
+        "alpha": 0.85,
+        "color": "#FF94CF",
+        "colors": [
+          "#FF94CF",
+          "#A783FF",
+          "#5FE0D0",
+          "#FFE1A8"
+        ],
+        "wave": true,
+        "count": 2
       }
     },
     {
@@ -710,10 +761,11 @@
       },
       "trail": {
         "style": "Ghost",
-        "length": 5,
-        "size": 0.75,
-        "alpha": 0.25,
-        "color": "#D6C8A6"
+        "length": 6,
+        "size": 0.9,
+        "alpha": 0.4,
+        "color": "#8C7BB0",
+        "soft": true
       }
     },
     {
@@ -725,10 +777,10 @@
         "tier": "Explorer.Hard"
       },
       "trail": {
-        "style": "Dots",
+        "style": "Prints",
         "length": 8,
-        "size": 0.18,
-        "alpha": 0.45,
+        "size": 0.28,
+        "alpha": 0.65,
         "color": "#FFFFFF"
       }
     },
@@ -742,10 +794,11 @@
       },
       "trail": {
         "style": "Ribbon",
-        "length": 4,
+        "length": 5,
         "size": 0.1,
-        "alpha": 0.6,
-        "color": "#FFFFFF"
+        "alpha": 0.75,
+        "color": "#8DFFD0",
+        "glow": true
       }
     },
     {
@@ -757,11 +810,11 @@
         "tier": "Demolition.Hard"
       },
       "trail": {
-        "style": "Sparks",
-        "length": 4,
-        "size": 0.28,
-        "alpha": 0.5,
-        "color": "#9C9C9C"
+        "style": "Chunks",
+        "length": 5,
+        "size": 0.32,
+        "alpha": 0.85,
+        "color": "#B3ADA3"
       }
     },
     {
@@ -773,11 +826,11 @@
         "tier": "Wildcard.Hard"
       },
       "trail": {
-        "style": "Ghost",
-        "length": 6,
-        "size": 0.85,
-        "alpha": 0.3,
-        "color": "#9D85E0"
+        "style": "Copies",
+        "length": 3,
+        "size": 0.7,
+        "alpha": 0.55,
+        "color": "#FF7FD6"
       }
     },
     {
@@ -790,10 +843,10 @@
       },
       "trail": {
         "style": "Dots",
-        "length": 5,
-        "size": 0.26,
-        "alpha": 0.5,
-        "color": "#E0D2B0"
+        "length": 6,
+        "size": 0.18,
+        "alpha": 0.65,
+        "color": "#F2C879"
       }
     },
     {
@@ -805,11 +858,11 @@
         "tier": "BulletTime.Hard"
       },
       "trail": {
-        "style": "Ghost",
-        "length": 8,
-        "size": 0.9,
-        "alpha": 0.2,
-        "color": "#FFFFFF"
+        "style": "Streaks",
+        "length": 7,
+        "size": 0.5,
+        "alpha": 0.6,
+        "color": "#DDE6FF"
       }
     },
     {
@@ -821,11 +874,11 @@
         "tier": "Molting.Hard"
       },
       "trail": {
-        "style": "Ghost",
-        "length": 4,
-        "size": 0.95,
-        "alpha": 0.18,
-        "color": "#C8B99A"
+        "style": "Skin",
+        "length": 5,
+        "size": 0.7,
+        "alpha": 0.55,
+        "color": "#EADFC6"
       }
     },
     {
@@ -837,11 +890,18 @@
         "tier": "LuckyDraw.Hard"
       },
       "trail": {
-        "style": "Sparks",
-        "length": 6,
-        "size": 0.2,
-        "alpha": 0.65,
-        "color": "#DCD3F5"
+        "style": "Confetti",
+        "length": 7,
+        "size": 0.3,
+        "alpha": 0.95,
+        "color": "#FF94CF",
+        "colors": [
+          "#FF94CF",
+          "#B7A6FF",
+          "#7DF0D0",
+          "#FFE1A8",
+          "#A8E04C"
+        ]
       }
     },
     {
@@ -856,8 +916,15 @@
         "style": "Sparks",
         "length": 7,
         "size": 0.26,
-        "alpha": 0.7,
-        "color": "#FFF6D6"
+        "alpha": 0.9,
+        "color": "#FFF4D0",
+        "colors": [
+          "#FFF4D0",
+          "#FFD6EC",
+          "#D6FBFF"
+        ],
+        "glow": true,
+        "count": 3
       }
     },
     {
@@ -870,10 +937,10 @@
       },
       "trail": {
         "style": "Ripple",
-        "length": 4,
-        "size": 0.5,
-        "alpha": 0.45,
-        "color": "#FFFFFF"
+        "length": 5,
+        "size": 0.75,
+        "alpha": 0.55,
+        "color": "#C9F6FF"
       }
     },
     {
